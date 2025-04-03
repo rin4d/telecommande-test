@@ -1,0 +1,364 @@
+* {
+    box-sizing: border-box;
+      touch-action: manipulation; /* Empêche le zoom avec les gestes tactiles */
+      -webkit-user-select: none; /* Désactive la sélection de texte */
+      user-select: none;
+  }
+  
+  html, body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3A3A3A;
+    overflow: hidden; /* Empêche le scroll */
+  }
+  
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #3A3A3A;
+  }
+  
+  
+  /* Fond noir */
+  .v137-341 {
+    background-image: url('assets/images/v137_341.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    width: 30vw; /* 30% de la largeur de l’écran */
+    height: 80vh; /* 80% de la hauteur de l’écran */
+    max-width: 225px; /* Taille max pour éviter qu'elle devienne énorme */
+    max-height: 800px; /* Taille max pour éviter qu'elle prenne trop de place */
+    position: relative; /* Plus besoin de `absolute` si on retire `.background` */
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  }
+  
+  
+  
+  /* Bouton power */
+  .v10 {
+    background: linear-gradient(to bottom, #ff4d4d, #b30000);
+    width: 48px;
+    height: 37px;
+    opacity: 1; 
+    border-radius: 50%; 
+    position: absolute;
+    top: 110px; /* (Y)*/
+    left: 46%; /* X */
+    transform: translateX(-50%); 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    box-shadow: 
+      0px 4px 8px rgba(0, 0, 0, 0.3), 
+      inset 0px 2px 4px rgba(255, 255, 255, 0.1);
+  }
+  
+  .v4-8 {
+    background-image: url('assets/images/v4_8.png'); 
+    background-size: cover; 
+    background-position: center; 
+    width: 32px; 
+    height: 32px; 
+    position: absolute; 
+    top: 113px; 
+    left: 46%; 
+    transform: translateX(-50%); 
+    
+  }
+  .button-power {
+    position: absolute;
+    width: 100px; 
+    height: 100px; 
+    background: transparent; 
+    border: none; 
+    cursor: pointer; 
+    z-index: 10; 
+  }
+  
+  /* Bouton refresh */
+  .v10-alt {
+    background: linear-gradient(to bottom, #33cc66, #0e5d2c);
+    width: 48px; 
+    height: 37px; 
+    border-radius: 50%; 
+    position: absolute;
+    top: 110px; 
+    left: 54%; 
+    transform: translateX(-50%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  }
+  
+  .v4_11 {
+    background-image: url('assets/images/v4_11.png'); 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center; 
+    width: 32px; 
+    height: 32px; 
+    position: absolute;
+    top: 113px; 
+    left: 54%; 
+    transform: translateX(-50%);
+    z-index: 4; 
+  }
+  
+  /* bouton home & mute */
+  .rond-home {
+    background: #606060; 
+    width: 45px; 
+    height: 37px; 
+    opacity: 1; 
+    border-radius: 50%; 
+    position: absolute;
+    top: 195px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    z-index: 10; 
+    box-shadow: 
+    0px 4px 8px rgba(0, 0, 0, 0.3),         /* ombre externe pour la profondeur */
+    inset 0px 2px 4px rgba(255, 255, 255, 0.1);  /* ombre intérieure pour l’effet bombé */
+  background: linear-gradient(to bottom, #6c6c6c, #3a3a3a); /* effet matière */
+  }
+  
+  .v4_5 {
+    background-image: url('assets/images/v4_5.png'); 
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    width: 29px; 
+    height: 29px;
+    position: absolute;
+    top: 199px;
+    left: 50%; 
+    transform: translateX(-50%);
+    z-index: 11; 
+  }
+  
+  .rond-mute {
+    background: #606060; 
+    width: 45px; 
+    height: 37px; 
+    opacity: 1; 
+    border-radius: 50%; 
+    position: absolute;
+    top: 255px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    z-index: 10; 
+    box-shadow: 
+    0px 4px 8px rgba(0, 0, 0, 0.3),         /* ombre externe pour la profondeur */
+    inset 0px 2px 4px rgba(255, 255, 255, 0.1);  /* ombre intérieure pour l’effet bombé */
+  background: linear-gradient(to bottom, #6c6c6c, #3a3a3a); /* effet matière */
+  }
+  
+  .v4_14 {
+    background-image: url('assets/images/v4_14.png'); 
+    background-size: contain;
+    background-repeat: no-repeat; 
+    background-position: center; 
+    width: 26px; 
+    height: 26px; 
+    position: absolute;
+    top: 261px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    z-index: 12; 
+  }
+  
+  /* Bouton chaine */
+  .v3-7 {
+    background: #606060; 
+    width: 38px; 
+    height: 130px; 
+    border-radius: 8px;
+    position: absolute; 
+    top: 178px; 
+    left: 53%; 
+    box-shadow: 
+    0px 4px 8px rgba(0, 0, 0, 0.3),         /* ombre externe pour la profondeur */
+    inset 0px 2px 4px rgba(255, 255, 255, 0.1);  /* ombre intérieure pour l’effet bombé */
+  background: linear-gradient(to bottom, #6c6c6c, #3a3a3a); /* effet matière */
+  }
+  .v4-22 {
+    color: #ffffff; 
+    font-family: 'Open Sans', sans-serif; 
+    font-weight: 600; 
+    font-size: 20px; 
+    opacity: 1; 
+    position: absolute; 
+    top: -3px;
+    left: 50%; 
+    transform: translateX(-50%); 
+  }
+  .v4-23 {
+    color: #ffffff; 
+    font-family: 'Open Sans', sans-serif; 
+    font-weight: 600; 
+    font-size: 20px; 
+    opacity: 1; 
+    position: absolute; 
+    top: 75px;
+    left: 50%; 
+    transform: translateX(-50%); 
+  }
+  
+  /* Bouton volume */
+  .v3-81 {
+    background: #606060;
+    width: 38px; 
+    height: 130px; 
+    border-radius: 8px;
+    position: absolute; 
+    top: 178px; 
+    left: 46%; 
+    transform: translateX(-50%);
+    box-shadow: 
+    0px 4px 8px rgba(0, 0, 0, 0.3),         /* ombre externe pour la profondeur */
+    inset 0px 2px 4px rgba(255, 255, 255, 0.1);  /* ombre intérieure pour l’effet bombé */
+  background: linear-gradient(to bottom, #6c6c6c, #3a3a3a); /* effet matière */
+  }
+  .v4_17{
+  background-image: url('assets/images/v4_17.png'); 
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+  width: 50px; 
+  height: 25px; 
+  position: absolute;
+  top: 195px; 
+  left: 46%; 
+  transform: translateX(-50%);
+  z-index: 5; 
+  }
+  
+  .v4_20{
+    background-image: url('assets/images/v4_20.png'); 
+    background-size: contain;
+    background-repeat: no-repeat; 
+    background-position: center;
+    width: 70px; 
+    height: 27px; 
+    position: absolute;
+    top: 270px;
+    left: 46%; 
+    transform: translateX(-50%);
+    z-index: 5; 
+    }
+  
+  /*BOUTON OK*/
+  .rond-ok {
+    background: #606060;
+    width: 148px; 
+    height: 151px; 
+    opacity: 1; 
+    border-radius: 50%; 
+    position: absolute; 
+    top: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 
+    0px 4px 8px rgba(0, 0, 0, 0.3),         /* ombre externe pour la profondeur */
+    inset 0px 2px 4px rgba(255, 255, 255, 0.1);  /* ombre intérieure pour l’effet bombé */
+  background: linear-gradient(to bottom, #6c6c6c, #3a3a3a); /* effet matière */
+  }
+  
+  .rond-plus {
+    background: #7e7e7e; 
+    width: 70px; 
+    height: 70px; 
+    opacity: 1; 
+    border-radius: 50%; 
+    position: absolute; 
+    top: 390px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    box-shadow: 
+    0px 4px 8px rgba(0, 0, 0, 0.3),         /* ombre externe pour la profondeur */
+    inset 0px 2px 4px rgba(255, 255, 255, 0.1);  /* ombre intérieure pour l’effet bombé */
+  background: linear-gradient(to bottom, #6c6c6c, #3a3a3a); /* effet matière */
+  }
+  
+  .text-ok {
+    color: #ffffff; 
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600; 
+    font-size: 23px; 
+    opacity: 1; 
+    position: absolute;
+    top: 389px; 
+    left: 767px; 
+    transform: translateX(-50%);
+    z-index: 7; 
+  }
+  
+  /* Flèche Haut (↑) */
+  .v101-34 {
+    background-image: url('assets/images/v100_34.png'); 
+    width: 50px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 365px; /* Ajusté pour être juste au-dessus du bouton OK */
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+  }
+  
+  /* Flèche Bas (↓) */
+  .v103-34 {
+    background-image: url('assets/images/v100_34.png'); 
+    width: 50px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 462px; /* Juste en dessous du bouton OK */
+    left: 50%;
+    transform: translateX(-50%) rotate(-90deg);
+  }
+  
+  /* Flèche Gauche (←) */
+  .v100-34 {
+    background-image: url('assets/images/v100_34.png'); 
+    width: 50px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 410px; /* Aligné au centre vertical du bouton OK */
+    left: calc(50% - 48px); /* Décalé vers la gauche */
+    transform: translateX(-50%) rotate(0deg);
+  }
+  
+  /* Flèche Droite (→) */
+  .v102-34 {
+    background-image: url('assets/images/v100_34.png'); 
+    width: 50px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 410px; /* Aligné au centre vertical du bouton OK */
+    left: calc(50% + 48px); /* Décalé vers la droite */
+    transform: translateX(-50%) rotate(180deg);
+  }
+  
+
+  
