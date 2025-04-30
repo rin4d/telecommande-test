@@ -8,24 +8,19 @@
   
 </head>
 <body>
-  <div class="background">
-    <!-- fond noir -->
-    <div class="v3-3"></div>
-    <div class="v137-341"></div>
+  <body>
+  <img src="assets/images/fond.png" alt="Volume Up" class="fond">
+
 
     <!-- bouton power -->
-    <div class="v10"></div>
-    <div class="v4-8" onclick="sendCommand('power_off')"></div>
+    <img src="assets/images/power-off.png" alt="Power Off" class="v10" onclick="sendCommand('power_off')">
+    <img src="assets/images/power-on.png" alt="Power On" class="v10-alt" onclick="sendCommand('power_on')">
     
-    <!-- bouton refresh -->
-    <div class="v10-alt"></div>
-    <div class="v4_11" onclick="sendCommand('power_on')"></div>
-
     <!-- bouton home & mute-->
-    <div class="rond-home"></div>
-    <div class="v4_5" onclick="sendCommand('power_off')"></div>
-    <div class="rond-mute"></div>
-    <div class="v4_14" onclick="sendCommand('mute')"></div>
+    <img src="assets/images/home.png" alt="home" class="home" onclick="sendCommand('home')">
+    <img src="assets/images/mute.png" alt="mute" class="mute" onclick="sendCommand('mute')">
+
+
 
     <!-- bouton chaine -->
     <div class="v3-7">
@@ -39,9 +34,11 @@
     <div class="v4_20" onclick="sendCommand('voldown')"></div>
 
     <!-- bouton OK -->
+    <img src="assets/images/ok.png" alt="mute" class="rond-ok" onclick="sendCommand('mute')">
     <div class="rond-ok"></div>
     <div class="rond-plus"></div>
     <p class="text-ok" onclick="sendCommand('enter')">OK</p>
+
     <!-- fleche OK -->
     <div class="v100-34" onclick="sendCommand('left')"></div> <!--fleche de gauche-->
     <div class="v101-34" onclick="sendCommand('up')"></div> <!--fleche du haut-->
@@ -54,29 +51,19 @@
     <div class="rond-bas-3"></div>
 
        <!-- bouton NUMEROS -->
-       <div class="rond-num1"></div>
-       <p class="text-un" onclick="sendCommand('1')">1</p>
-       <div class="rond-num2"></div>
-       <p class="text-deux" onclick="sendCommand('2')">2</p>
-       <div class="rond-num3"></div>
-       <p class="text-trois" onclick="sendCommand('3')">3</p>
+       <img src="assets/images/1.png" alt="1" class="rond-num1" onclick="sendCommand('1')">
+       <img src="assets/images/2.png" alt="1" class="rond-num2" onclick="sendCommand('2')">
+       <img src="assets/images/3.png" alt="1" class="rond-num3" onclick="sendCommand('3')">
 
-       <div class="rond-num4"></div>
-       <p class="text-quatre"onclick="sendCommand('4')">4</p>
-       <div class="rond-num5"></div>
-       <p class="text-cinq" onclick="sendCommand('5')">5</p>
-       <div class="rond-num6"></div>
-       <p class="text-six" onclick="sendCommand('6')">6</p>
+       <img src="assets/images/4.png" alt="1" class="rond-num4" onclick="sendCommand('4')">
+       <img src="assets/images/5.png" alt="1" class="rond-num5" onclick="sendCommand('5')">
+       <img src="assets/images/5.png" alt="1" class="rond-num6" onclick="sendCommand('6')">
 
-       <div class="rond-num7"></div>
-       <p class="text-sept" onclick="sendCommand('7')">7</p>
-       <div class="rond-num8"></div>
-       <p class="text-huit" onclick="sendCommand('8')">8</p>
-       <div class="rond-num9"></div>
-       <p class="text-neuf" onclick="sendCommand('9')">9</p>
+       <img src="assets/images/7.png" alt="1" class="rond-num7" onclick="sendCommand('7')">
+       <img src="assets/images/8.png" alt="1" class="rond-num8" onclick="sendCommand('8')">
+       <img src="assets/images/9.png" alt="1" class="rond-num9" onclick="sendCommand('9')">
 
-       <div class="rond-bas-2"></div>
-       <p class="text-zero">0</p>
+       <img src="assets/images/0.png" alt="1" class="rond-num0" onclick="sendCommand('0')">
 
    
 

@@ -1,9 +1,3 @@
-* {
-  box-sizing: border-box;
-    touch-action: manipulation; /* Empêche le zoom avec les gestes tactiles */
-    -webkit-user-select: none; /* Désactive la sélection de texte */
-    user-select: none;
-}
 
 html, body {
   width: 100%;
@@ -49,75 +43,28 @@ body {
 
 /* Bouton power */
 .v10 {
-  background: linear-gradient(to bottom, #ff4d4d, #b30000);
-  width: 48px;
-  height: 37px;
-  opacity: 1; 
+  width: 55px;
+  height: 40px;
   border-radius: 50%; 
   position: absolute;
   top: 110px; /* (Y)*/
   left: 46%; /* X */
   transform: translateX(-50%); 
-  display: flex; 
-  justify-content: center;
-  align-items: center;
-  box-shadow: 
-    0px 4px 8px rgba(0, 0, 0, 0.3), 
-    inset 0px 2px 4px rgba(255, 255, 255, 0.1);
 }
 
-.v4-8 {
-  background-image: url('assets/images/v4_8.png'); 
-  background-size: cover; 
-  background-position: center; 
-  width: 32px; 
-  height: 32px; 
-  position: absolute; 
-  top: 113px; 
-  left: 46%; 
-  transform: translateX(-50%); 
-  
-}
-.button-power {
-  position: absolute;
-  width: 100px; 
-  height: 100px; 
-  background: transparent; 
-  border: none; 
-  cursor: pointer; 
-  z-index: 10; 
-}
-
-/* Bouton refresh */
 .v10-alt {
-  background: linear-gradient(to bottom, #33cc66, #0e5d2c);
-  width: 48px; 
-  height: 37px; 
+  width: 55px;
+  height: 40px;
   border-radius: 50%; 
   position: absolute;
   top: 110px; 
   left: 54%; 
   transform: translateX(-50%);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
 }
 
-.v4_11 {
-  background-image: url('assets/images/v4_11.png'); 
-  background-size: contain; 
-  background-repeat: no-repeat;
-  background-position: center; 
-  width: 32px; 
-  height: 32px; 
-  position: absolute;
-  top: 113px; 
-  left: 54%; 
-  transform: translateX(-50%);
-  z-index: 4; 
-}
 
 /* bouton home & mute */
-.rond-home {
-  background: #606060; 
+.home {
   width: 45px; 
   height: 37px; 
   opacity: 1; 
@@ -126,29 +73,9 @@ body {
   top: 195px; 
   left: 50%; 
   transform: translateX(-50%);
-  z-index: 10; 
-  box-shadow: 
-  0px 4px 8px rgba(0, 0, 0, 0.3),         /* ombre externe pour la profondeur */
-  inset 0px 2px 4px rgba(255, 255, 255, 0.1);  /* ombre intérieure pour l’effet bombé */
-background: linear-gradient(to bottom, #6c6c6c, #3a3a3a); /* effet matière */
 }
 
-.v4_5 {
-  background-image: url('assets/images/v4_5.png'); 
-  background-size: contain; 
-  background-repeat: no-repeat; 
-  background-position: center; 
-  width: 29px; 
-  height: 29px;
-  position: absolute;
-  top: 199px;
-  left: 50%; 
-  transform: translateX(-50%);
-  z-index: 11; 
-}
-
-.rond-mute {
-  background: #606060; 
+.mute {
   width: 45px; 
   height: 37px; 
   opacity: 1; 
@@ -157,26 +84,8 @@ background: linear-gradient(to bottom, #6c6c6c, #3a3a3a); /* effet matière */
   top: 255px; 
   left: 50%; 
   transform: translateX(-50%);
-  z-index: 10; 
-  box-shadow: 
-  0px 4px 8px rgba(0, 0, 0, 0.3),         /* ombre externe pour la profondeur */
-  inset 0px 2px 4px rgba(255, 255, 255, 0.1);  /* ombre intérieure pour l’effet bombé */
-background: linear-gradient(to bottom, #6c6c6c, #3a3a3a); /* effet matière */
 }
 
-.v4_14 {
-  background-image: url('assets/images/v4_14.png'); 
-  background-size: contain;
-  background-repeat: no-repeat; 
-  background-position: center; 
-  width: 26px; 
-  height: 26px; 
-  position: absolute;
-  top: 261px; 
-  left: 50%; 
-  transform: translateX(-50%);
-  z-index: 12; 
-}
 
 /* Bouton chaine */
 .v3-7 {
@@ -426,7 +335,6 @@ background: linear-gradient(to bottom, #6c6c6c, #3a3a3a); /* effet matière */
 
 /* BOUTON NUMEROS */
 .rond-num1 {
-  background: #606060; 
   width: 45px;
   height: 37px;
   opacity: 1;
@@ -435,28 +343,9 @@ background: linear-gradient(to bottom, #6c6c6c, #3a3a3a); /* effet matière */
   top: 520px; 
   left: 46%; 
   transform: translateX(-50%);
-  z-index: 3; 
-  box-shadow: 
-  0px 4px 8px rgba(0, 0, 0, 0.3),         /* ombre externe pour la profondeur */
-  inset 0px 2px 4px rgba(255, 255, 255, 0.1);  /* ombre intérieure pour l’effet bombé */
-background: linear-gradient(to bottom, #6c6c6c, #3a3a3a); /* effet matière */
-}
-
-.text-un {
-  color: #ffffff; 
-  font-family: 'Open Sans', sans-serif; 
-  font-weight:  550; 
-  font-size: 24px; 
-  opacity: 1; 
-  position: absolute;
-  top: 500px; 
-  left: 46%; 
-  transform: translateX(-50%);
-  z-index: 15; 
 }
 
 .rond-num2 {
-  background: #606060; 
   width: 45px;
   height: 37px;
   opacity: 1;
@@ -465,28 +354,9 @@ background: linear-gradient(to bottom, #6c6c6c, #3a3a3a); /* effet matière */
   top: 520px; 
   left: 50%; 
   transform: translateX(-50%);
-  z-index: 3; 
-  box-shadow: 
-  0px 4px 8px rgba(0, 0, 0, 0.3),         /* ombre externe pour la profondeur */
-  inset 0px 2px 4px rgba(255, 255, 255, 0.1);  /* ombre intérieure pour l’effet bombé */
-background: linear-gradient(to bottom, #6c6c6c, #3a3a3a); /* effet matière */
-}
-
-.text-deux {
-  color: #ffffff; 
-  font-family: 'Open Sans', sans-serif; 
-  font-weight:  550; 
-  font-size: 24px; 
-  opacity: 1; 
-  position: absolute;
-  top: 500px; 
-  left: 50%; 
-  transform: translateX(-50%);
-  z-index: 15; 
 }
 
 .rond-num3 {
-  background: #606060; 
   width: 45px;
   height: 37px;
   opacity: 1;
@@ -495,28 +365,9 @@ background: linear-gradient(to bottom, #6c6c6c, #3a3a3a); /* effet matière */
   top: 520px; 
   left: 54%; 
   transform: translateX(-50%);
-  z-index: 3; 
-  box-shadow: 
-  0px 4px 8px rgba(0, 0, 0, 0.3),         /* ombre externe pour la profondeur */
-  inset 0px 2px 4px rgba(255, 255, 255, 0.1);  /* ombre intérieure pour l’effet bombé */
-background: linear-gradient(to bottom, #6c6c6c, #3a3a3a); /* effet matière */
-}
-
-.text-trois {
-  color: #ffffff; 
-  font-family: 'Open Sans', sans-serif; 
-  font-weight:  550; 
-  font-size: 24px; 
-  opacity: 1; 
-  position: absolute;
-  top: 500px; 
-  left: 54%; 
-  transform: translateX(-50%);
-  z-index: 15; 
 }
 
 .rond-num4 {
-  background: #606060; 
   width: 45px;
   height: 37px;
   opacity: 1;
@@ -525,28 +376,9 @@ background: linear-gradient(to bottom, #6c6c6c, #3a3a3a); /* effet matière */
   top: 570px; 
   left: 46%; 
   transform: translateX(-50%);
-  z-index: 3; 
-  box-shadow: 
-  0px 4px 8px rgba(0, 0, 0, 0.3),         /* ombre externe pour la profondeur */
-  inset 0px 2px 4px rgba(255, 255, 255, 0.1);  /* ombre intérieure pour l’effet bombé */
-background: linear-gradient(to bottom, #6c6c6c, #3a3a3a); /* effet matière */
-}
-
-.text-quatre {
-  color: #ffffff; 
-  font-family: 'Open Sans', sans-serif; 
-  font-weight:  550; 
-  font-size: 24px; 
-  opacity: 1; 
-  position: absolute;
-  top: 550px; 
-  left: 46%; 
-  transform: translateX(-50%);
-  z-index: 15; 
 }
 
 .rond-num5 {
-  background: #606060; 
   width: 45px;
   height: 37px;
   opacity: 1;
@@ -555,28 +387,9 @@ background: linear-gradient(to bottom, #6c6c6c, #3a3a3a); /* effet matière */
   top: 570px; 
   left: 50%;
   transform: translateX(-50%);
-  z-index: 3; 
-  box-shadow: 
-  0px 4px 8px rgba(0, 0, 0, 0.3),         /* ombre externe pour la profondeur */
-  inset 0px 2px 4px rgba(255, 255, 255, 0.1);  /* ombre intérieure pour l’effet bombé */
-background: linear-gradient(to bottom, #6c6c6c, #3a3a3a); /* effet matière */
-}
-
-.text-cinq {
-  color: #ffffff; 
-  font-family: 'Open Sans', sans-serif; 
-  font-weight:  550; 
-  font-size: 24px; 
-  opacity: 1; 
-  position: absolute;
-  top: 550px; 
-  left: 50%; 
-  transform: translateX(-50%);
-  z-index: 15; 
 }
 
 .rond-num6 {
-  background: #606060; 
   width: 45px;
   height: 37px;
   opacity: 1;
@@ -585,28 +398,9 @@ background: linear-gradient(to bottom, #6c6c6c, #3a3a3a); /* effet matière */
   top: 570px; 
   left: 54%; 
   transform: translateX(-50%);
-  z-index: 3; 
-  box-shadow: 
-  0px 4px 8px rgba(0, 0, 0, 0.3),         /* ombre externe pour la profondeur */
-  inset 0px 2px 4px rgba(255, 255, 255, 0.1);  /* ombre intérieure pour l’effet bombé */
-background: linear-gradient(to bottom, #6c6c6c, #3a3a3a); /* effet matière */
-}
-
-.text-six {
-  color: #ffffff; 
-  font-family: 'Open Sans', sans-serif; 
-  font-weight:  550; 
-  font-size: 24px; 
-  opacity: 1; 
-  position: absolute;
-  top: 550px; 
-  left: 54%; 
-  transform: translateX(-50%);
-  z-index: 15; 
 }
 
 .rond-num7 {
-  background: #606060; 
   width: 45px;
   height: 37px;
   opacity: 1;
@@ -615,58 +409,20 @@ background: linear-gradient(to bottom, #6c6c6c, #3a3a3a); /* effet matière */
   top: 620px; 
   left: 46%; 
   transform: translateX(-50%);
-  z-index: 3;
-  box-shadow: 
-  0px 4px 8px rgba(0, 0, 0, 0.3),         /* ombre externe pour la profondeur */
-  inset 0px 2px 4px rgba(255, 255, 255, 0.1);  /* ombre intérieure pour l’effet bombé */
-background: linear-gradient(to bottom, #6c6c6c, #3a3a3a); /* effet matière */
-}
-
-.text-sept {
-  color: #ffffff; 
-  font-family: 'Open Sans', sans-serif; 
-  font-weight:  550; 
-  font-size: 24px; 
-  opacity: 1; 
-  position: absolute;
-  top: 600px; 
-  left: 46%; 
-  transform: translateX(-50%);
-  z-index: 15; 
 }
 
 .rond-num8 {
-  background: #606060;
   width: 45px;
   height: 37px;
   opacity: 1;
   border-radius: 50%;
   position: absolute;
-  top: 620px; /* 50px d'ecart netre chaque bouton */
+  top: 620px; 
   left: 50%;
   transform: translateX(-50%);
-  z-index: 3; 
-  box-shadow: 
-  0px 4px 8px rgba(0, 0, 0, 0.3),         /* ombre externe pour la profondeur */
-  inset 0px 2px 4px rgba(255, 255, 255, 0.1);  /* ombre intérieure pour l’effet bombé */
-background: linear-gradient(to bottom, #6c6c6c, #3a3a3a); /* effet matière */
-}
-
-.text-huit {
-  color: #ffffff; 
-  font-family: 'Open Sans', sans-serif; 
-  font-weight:  550; 
-  font-size: 24px; 
-  opacity: 1; 
-  position: absolute;
-  top: 600px; /* 20px decart entre text et bouton */
-  left: 50%; 
-  transform: translateX(-50%);
-  z-index: 15; 
 }
 
 .rond-num9 {
-  background: #606060; 
   width: 45px;
   height: 37px;
   opacity: 1;
@@ -675,28 +431,10 @@ background: linear-gradient(to bottom, #6c6c6c, #3a3a3a); /* effet matière */
   top: 620px; 
   left: 54%; 
   transform: translateX(-50%);
-  z-index: 3; 
-  box-shadow: 
-  0px 4px 8px rgba(0, 0, 0, 0.3),         /* ombre externe pour la profondeur */
-  inset 0px 2px 4px rgba(255, 255, 255, 0.1);  /* ombre intérieure pour l’effet bombé */
-background: linear-gradient(to bottom, #6c6c6c, #3a3a3a); /* effet matière */
 }
 
-.text-neuf {
-  color: #ffffff; 
-  font-family: 'Open Sans', sans-serif; 
-  font-weight:  550; 
-  font-size: 24px; 
-  opacity: 1; 
-  position: absolute;
-  top: 600px; 
-  left: 54%; 
-  transform: translateX(-50%);
-  z-index: 15; 
-}
 
-.rond-bas-2 {
-  background: #606060; 
+.rond-num0 {
   width: 45px;
   height: 37px;
   opacity: 1;
@@ -705,22 +443,5 @@ background: linear-gradient(to bottom, #6c6c6c, #3a3a3a); /* effet matière */
   top: 670px; 
   left: 50%; 
   transform: translateX(-50%);
-  z-index: 3; 
-  box-shadow: 
-  0px 4px 8px rgba(0, 0, 0, 0.3),         /* ombre externe pour la profondeur */
-  inset 0px 2px 4px rgba(255, 255, 255, 0.1);  /* ombre intérieure pour l’effet bombé */
-background: linear-gradient(to bottom, #6c6c6c, #3a3a3a); /* effet matière */
 }
 
-.text-zero {
-  color: #ffffff; 
-  font-family: 'Open Sans', sans-serif; 
-  font-weight:  550; 
-  font-size: 24px; 
-  opacity: 1; 
-  position: absolute;
-  top: 650px; 
-  left: 50%; 
-  transform: translateX(-50%);
-  z-index: 15; 
-}
