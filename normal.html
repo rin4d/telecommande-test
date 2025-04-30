@@ -5,68 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>Maquette Télécommande</title>
   <link rel="stylesheet" href="normal.css">
-  
 </head>
 <body>
-  <body>
-  <img src="assets/images/fond.png" alt="Volume Up" class="fond">
+  <div class="telecommande">
+    <img src="assets/images/fond.png" alt="Fond télécommande" class="fond">
 
-
-    <!-- bouton power -->
+    <!-- Boutons power -->
     <img src="assets/images/power-off.png" alt="Power Off" class="v10" onclick="sendCommand('power_off')">
     <img src="assets/images/power-on.png" alt="Power On" class="v10-alt" onclick="sendCommand('power_on')">
-    
-    <!-- bouton home & mute-->
-    <img src="assets/images/home.png" alt="home" class="home" onclick="sendCommand('home')">
-    <img src="assets/images/mute.png" alt="mute" class="mute" onclick="sendCommand('mute')">
 
+    <!-- Home & mute -->
+    <img src="assets/images/home.png" alt="Home" class="home" onclick="sendCommand('home')">
+    <img src="assets/images/mute.png" alt="Mute" class="mute" onclick="sendCommand('mute')">
 
-
-    <!-- bouton chaine -->
+    <!-- Chaine -->
     <div class="v3-7">
       <p class="v4-22" onclick="sendCommand('chanup')">P+</p>
       <p class="v4-23" onclick="sendCommand('chandown')">P-</p>
     </div>
 
-    <!-- bouton volume -->
+    <!-- Volume -->
     <div class="v3-81"></div>
     <div class="v4_17" onclick="sendCommand('volup')"></div>
     <div class="v4_20" onclick="sendCommand('voldown')"></div>
 
-    <!-- bouton OK -->
-    <img src="assets/images/ok.png" alt="mute" class="rond-ok" onclick="sendCommand('mute')">
-    <div class="rond-ok"></div>
+    <!-- OK -->
+    <img src="#" alt="OK" class="rond-ok" onclick="sendCommand('enter')">
     <div class="rond-plus"></div>
     <p class="text-ok" onclick="sendCommand('enter')">OK</p>
 
-    <!-- fleche OK -->
-    <div class="v100-34" onclick="sendCommand('left')"></div> <!--fleche de gauche-->
-    <div class="v101-34" onclick="sendCommand('up')"></div> <!--fleche du haut-->
-    <div class="v102-34" onclick="sendCommand('right')"></div> <!--fleche de droite-->
-    <div class="v103-34" onclick="sendCommand('down')"></div> <!--fleche de bas-->
-    <!-- bouton raccourcis -->
+    <!-- Flèches -->
+    <div class="v100-34" onclick="sendCommand('left')"></div>
+    <div class="v101-34" onclick="sendCommand('up')"></div>
+    <div class="v102-34" onclick="sendCommand('right')"></div>
+    <div class="v103-34" onclick="sendCommand('down')"></div>
+
+    <!-- Raccourcis -->
     <div class="rond-bas"></div>
     <div class="v5_3"></div>
     <div class="v5_9"></div>
     <div class="rond-bas-3"></div>
 
-       <!-- bouton NUMEROS -->
-       <img src="assets/images/1.png" alt="1" class="rond-num1" onclick="sendCommand('1')">
-       <img src="assets/images/2.png" alt="1" class="rond-num2" onclick="sendCommand('2')">
-       <img src="assets/images/3.png" alt="1" class="rond-num3" onclick="sendCommand('3')">
-
-       <img src="assets/images/4.png" alt="1" class="rond-num4" onclick="sendCommand('4')">
-       <img src="assets/images/5.png" alt="1" class="rond-num5" onclick="sendCommand('5')">
-       <img src="assets/images/5.png" alt="1" class="rond-num6" onclick="sendCommand('6')">
-
-       <img src="assets/images/7.png" alt="1" class="rond-num7" onclick="sendCommand('7')">
-       <img src="assets/images/8.png" alt="1" class="rond-num8" onclick="sendCommand('8')">
-       <img src="assets/images/9.png" alt="1" class="rond-num9" onclick="sendCommand('9')">
-
-       <img src="assets/images/0.png" alt="1" class="rond-num0" onclick="sendCommand('0')">
-
-   
-
+    <!-- Chiffres -->
+    <img src="assets/images/1.png" alt="1" class="rond-num1" onclick="sendCommand('1')">
+    <img src="assets/images/2.png" alt="2" class="rond-num2" onclick="sendCommand('2')">
+    <img src="assets/images/3.png" alt="3" class="rond-num3" onclick="sendCommand('3')">
+    <img src="assets/images/4.png" alt="4" class="rond-num4" onclick="sendCommand('4')">
+    <img src="assets/images/5.png" alt="5" class="rond-num5" onclick="sendCommand('5')">
+    <img src="assets/images/6.png" alt="6" class="rond-num6" onclick="sendCommand('6')">
+    <img src="assets/images/7.png" alt="7" class="rond-num7" onclick="sendCommand('7')">
+    <img src="assets/images/8.png" alt="8" class="rond-num8" onclick="sendCommand('8')">
+    <img src="assets/images/9.png" alt="9" class="rond-num9" onclick="sendCommand('9')">
+    <img src="assets/images/0.png" alt="0" class="rond-num0" onclick="sendCommand('0')">
   </div>
 
   <script src="script2.js"></script>
