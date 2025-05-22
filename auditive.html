@@ -117,7 +117,27 @@
 
   </div>
 
+  <script>
+    function sendCommand(cmd) {
+      console.log("Commande envoyée :", cmd);
+    }
 
+    // Récupérer la langue de l'URL
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get("lang") || "fr";
+
+    const translatedImages = {
+      shortcut1: "sous-titres",
+      retour: "retour"
+    };
+
+    Object.entries(translatedImages).forEach(([className, baseName]) => {
+      const el = document.querySelector(`.${className}`);
+      if (el) {
+        el.src = `assets/images/${baseName}-${lang}.png`;
+      }
+    });
+  </script>
   <script>
     function sendCommand(cmd) {
       console.log("Commande envoyée :", cmd);
