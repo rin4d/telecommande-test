@@ -10,7 +10,7 @@
   <div class="container">
     <header>
       <div class="language-menu">
-        <select>
+        <select id="language-selector">
           <option value="fr">🇫🇷 Français</option>
           <option value="en">🇬🇧 English</option>
           <option value="es">🇪🇸 Español</option>
@@ -48,5 +48,29 @@
     <script src="lang.js"></script>
     <script src="script2.js"></script>
   </div>
+
+  <script>
+  const langSelector = document.getElementById("language-selector");
+  const links = document.querySelectorAll(".remote-button");
+
+  // Fonction pour mettre à jour les liens avec la langue sélectionnée
+  function updateLinks(lang) {
+    links.forEach(link => {
+      const url = new URL(link.getAttribute("href"), window.location.origin);
+      url.searchParams.set("lang", lang);
+      link.setAttribute("href", url.pathname + url.search);
+    });
+  }
+
+  // Mise à jour initiale si la page est rechargée
+  updateLinks(langSelector.value);
+
+  // Mise à jour à chaque changement de langue
+  langSelector.addEventListener("change", (e) => {
+    const selectedLang = e.target.value;
+    updateLinks(selectedLang);
+  });
+</script>
+
 </body>
 </html>
