@@ -20,6 +20,60 @@
       background-color: #3A3A3A;
     }
 
+  .home {
+  background: linear-gradient(to bottom, #6c6c6c, #3a3a3a);
+  border-radius: 50%;
+  box-shadow:
+    0px 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0px 2px 4px rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .home img {
+  width: 70%;
+  height: 60%;
+  object-fit: contain;
+  pointer-events: none; /* pour que le clic passe à travers l'image */
+  }
+
+    .mute {
+  background: linear-gradient(to bottom, #6c6c6c, #3a3a3a);
+  border-radius: 50%;
+  box-shadow:
+    0px 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0px 2px 4px rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+    .mute img {
+  width: 70%;
+  height: 60%;
+  object-fit: contain;
+  pointer-events: none; /* pour que le clic passe à travers l'image */
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
     .remote {
       position: relative;
       width: 100%;
@@ -39,6 +93,7 @@
 
     .power-off { top: 6%; left: 32%; transform: translateX(-50%); width: 16%; }
     .power-on  { top: 6%; left: 68%; transform: translateX(-50%); width: 16%; }
+    .rond-home      { top: 17%; left: 50%; transform: translateX(-50%); width: 14%; }
     .home      { top: 17%; left: 50%; transform: translateX(-50%); width: 14%; }
     .mute      { top: 25%; left: 50%; transform: translateX(-50%); width: 14%; }
 
@@ -80,8 +135,14 @@
     <img src="assets/images/fond.png" alt="télécommande" class="telecommande-bg">
     <img src="assets/images/power-off.png" class="btn power-off" onclick="sendCommand('power_off')">
     <img src="assets/images/power-on.png"  class="btn power-on" onclick="sendCommand('power_on')">
-    <img src="assets/images/home.png"      class="btn home" onclick="sendCommand('home')">
-    <img src="assets/images/mute.png"      class="btn mute" onclick="sendCommand('mute')">
+    
+
+    <div class="btn home" onclick="sendCommand('home')">
+    <img src="assets/images/home.png" alt="Home icon" /></div>
+     <div class="btn mute" onclick="sendCommand('mute')">
+    <img src="assets/images/mute.png" alt="Mute icon" /></div>
+    
+
 
      <img src="assets/images/chaine.png" class="btn chaine">
     <img src="assets/images/chanup.png" class="btn chanup" onclick="sendCommand('chanup')">
