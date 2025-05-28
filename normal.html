@@ -20,6 +20,44 @@
       background-color: #3A3A3A;
     }
 
+/* power */
+      .power-off {
+  background: linear-gradient(to bottom, #FF4D4D, #B30000);
+  border-radius: 50%;
+  box-shadow:
+    0px 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0px 2px 4px rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .power-off img {
+  width: 70%;
+  height: 60%;
+  object-fit: contain;
+  pointer-events: none; 
+  }
+
+  .power-on {
+  background: linear-gradient(to bottom, #33CC66, #0E5D2C);
+  border-radius: 50%;
+  box-shadow:
+    0px 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0px 2px 4px rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .power-on img {
+  width: 70%;
+  height: 60%;
+  object-fit: contain;
+  pointer-events: none; 
+  }
+
+  /* home et mute */
   .home {
   background: linear-gradient(to bottom, #6c6c6c, #3a3a3a);
   border-radius: 50%;
@@ -57,10 +95,61 @@
   }
 
 
+  /* Raccourci */
 
+    .menu {
+  background: linear-gradient(to bottom, #6c6c6c, #3a3a3a);
+  border-radius: 50%;
+  box-shadow:
+    0px 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0px 2px 4px rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
 
+      .menu img {
+  width: 70%;
+  height: 60%;
+  object-fit: contain;
+  pointer-events: none; /* pour que le clic passe à travers l'image */
+  }
 
+      .info {
+  background: linear-gradient(to bottom, #6c6c6c, #3a3a3a);
+  border-radius: 50%;
+  box-shadow:
+    0px 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0px 2px 4px rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
 
+      .info img {
+  width: 70%;
+  height: 60%;
+  object-fit: contain;
+  pointer-events: none; /* pour que le clic passe à travers l'image */
+  }
+
+      .num1 {
+  background: linear-gradient(to bottom, #6c6c6c, #3a3a3a);
+  border-radius: 50%;
+  box-shadow:
+    0px 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0px 2px 4px rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+      .num1 img {
+  width: 30%;
+  height: 50%;
+  object-fit: contain;
+  pointer-events: none; /* pour que le clic passe à travers l'image */
+  }
 
 
 
@@ -112,8 +201,8 @@
     .arrow-left{ top: 39%; left: 40%; transform: translateX(-50%) rotate(0deg); width: 10%; }
     .arrow-right{ top: 39%; left: 60%; transform: translateX(-50%) rotate(180deg); width: 10%; }
 
-    .shortcut1 { top: 57%; left: 32%; transform: translateX(-50%); width: 14%; }
-    .shortcut2 { top: 57%; left: 68%; transform: translateX(-50%); width: 14%; }
+    .menu { top: 57%; left: 32%; transform: translateX(-50%); width: 14%; }
+    .info { top: 57%; left: 68%; transform: translateX(-50%); width: 14%; }
 
     .num1 { top: 65%; left: 32%; transform: translateX(-50%); width: 16%; }
     .num2 { top: 65%; left: 50%; transform: translateX(-50%); width: 16%; }
@@ -133,8 +222,13 @@
 <body>
   <div class="remote">
     <img src="assets/images/fond.png" alt="télécommande" class="telecommande-bg">
-    <img src="assets/images/power-off.png" class="btn power-off" onclick="sendCommand('power_off')">
-    <img src="assets/images/power-on.png"  class="btn power-on" onclick="sendCommand('power_on')">
+    
+    <div class="btn power-off" onclick="sendCommand('off')">
+    <img src="assets/images/power.png" alt="Power off icon" /></div>
+
+    <div class="btn power-on" onclick="sendCommand('on')">
+    <img src="assets/images/power.png" alt="Power on icon" /></div>
+
     
 
     <div class="btn home" onclick="sendCommand('home')">
@@ -159,10 +253,14 @@
     <img src="" class="btn arrow-left" onclick="sendCommand('left')">
     <img src="" class="btn arrow-right" onclick="sendCommand('right')">
 
-    <img src="assets/images/menu.png" class="btn shortcut1" onclick="sendCommand('shortcut1')">
-    <img src="assets/images/info.png" class="btn shortcut2" onclick="sendCommand('shortcut2')">
+    <div class="btn menu" onclick="sendCommand('menu')">
+    <img src="assets/images/menu.png" alt="Menu icon" /></div>
+    <div class="btn info" onclick="sendCommand('info')">
+    <img src="assets/images/info.png" alt="Info icon" /></div>
 
-    <img src="assets/images/1.png" class="btn num1" onclick="sendCommand('1')">
+    <div class="btn num1" onclick="sendCommand('1')">
+    <img src="assets/images/1.png" alt="num 1" /></div>
+
     <img src="assets/images/2.png" class="btn num2" onclick="sendCommand('2')">
     <img src="assets/images/3.png" class="btn num3" onclick="sendCommand('3')">
     <img src="assets/images/4.png" class="btn num4" onclick="sendCommand('4')">
