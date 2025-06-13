@@ -73,7 +73,7 @@
   width: 70%;
   height: 60%;
   object-fit: contain;
-  pointer-events: none; /* pour que le clic passe à travers l'image */
+  pointer-events: none; 
   }
 
     .mute {
@@ -91,19 +91,57 @@
   width: 70%;
   height: 60%;
   object-fit: contain;
-  pointer-events: none; /* pour que le clic passe à travers l'image */
+  pointer-events: none; 
   }
 
   /* btn volume*/
 .volume, .chaine {
   background: linear-gradient(to bottom, #6c6c6c, #3a3a3a);
-  border-radius: 12px; /* <-- arrondi visible */
+  border-radius: 12px; 
   box-shadow:
     0px 4px 8px rgba(0, 0, 0, 0.3),
     inset 0px 2px 4px rgba(255, 255, 255, 0.1);
   overflow: hidden;
   position: absolute;
 }
+
+.chanup, .chandown {
+  color: white;
+  font-weight: bold;
+  font-size: 2.8vw; 
+  background: none; 
+  border: none;
+}
+
+.retour {
+  padding: 5px 0;
+  background: linear-gradient(to bottom, #64B2D4, #345D6E);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 1.1em;
+  text-align: center;
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.retour a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.retour a:visited {
+  color: white;
+}
+
+
+
+
 
 
   /* Raccourci */
@@ -123,7 +161,7 @@
   width: 70%;
   height: 60%;
   object-fit: contain;
-  pointer-events: none; /* pour que le clic passe à travers l'image */
+  pointer-events: none; 
   }
 
       .info {
@@ -141,7 +179,7 @@
   width: 70%;
   height: 60%;
   object-fit: contain;
-  pointer-events: none; /* pour que le clic passe à travers l'image */
+  pointer-events: none; 
   }
 
 .num {
@@ -159,7 +197,7 @@
   font-size: 1.6em;
   cursor: pointer;
   width: 17%;
-  height: 5%; /* hauteur plus petite que la largeur */
+  height: 5%; 
 }
 
 .rond-direction {
@@ -238,8 +276,8 @@
     .chandown  { top: 28%; left: 64%; width: 7%; }
 
     .volume     { top: 14%; left: 26%; width: 12%; height: 19%; }
-    .volup     { top: 16%; left: 26%; width: 11%; }
-    .voldown   { top: 27%; left: 26%; width: 12%; }
+    .volup     { top: 16%; left: 27%; width: 9%; }
+    .voldown   { top: 27%; left: 27%; width: 9%; }
 
     .rond-ok    { top: 35%; left: 50%; transform: translateX(-50%); width: 44%; z-index: 1; }
     .ok        { top: 39%; left: 50%; transform: translateX(-50%); width: 27%; z-index: 2; }
@@ -265,7 +303,9 @@
 
 .num0 { top: 86%; left: 50%; transform: translateX(-50%); width: 14%; aspect-ratio: 1/1; }
     
-    .retour { top: -4%; left: 50%; transform: translateX(-50%); width: 26%; }
+.retour { top: -5%; left: 50%; transform: translateX(-50%); width: 27%; }
+.sabsystem { top: 94%; left: 50%; transform: translateX(-50%); width: 18%; }
+  
   </style>
 </head>
 <body>
@@ -286,12 +326,14 @@
     <img src="assets/images/mute.png" alt="Mute icon" /></div>
     
     <div class="btn chaine"></div>
-    <img src="assets/images/chanup.png" class="btn chanup" onclick="sendCommand('chanup')">
-    <img src="assets/images/chandown.png" class="btn chandown" onclick="sendCommand('chandown')">
+    <div class="btn chanup" onclick="sendCommand('chanup')">P+</div>
+    <div class="btn chandown" onclick="sendCommand('chandown')">P−</div>
+
+
 
     <div class="btn volume"></div>
-    <img src="assets/images/volup.png" class="btn volup" onclick="sendCommand('mute')" alt="Mute icon" />
-    <img src="assets/images/voldown.png" class="btn voldown" alt="Mute icon" />
+    <img src="assets/images/volup.png" class="btn volup" onclick="sendCommand('volup')" alt="volup icon" />
+    <img src="assets/images/voldown.png" class="btn voldown" onclick="sendCommand('voldown')"  alt="voldown icon" />
 
 
 <!-- Cercle central directionnel -->
@@ -307,7 +349,7 @@
 <div class="btn bouton-ok" onclick="sendCommand('enter')">OK</div>
 
 
-    <div class="btn menu" onclick="sendCommand('menu')">
+    <div class="btn menu" onclick="sendCommand('home')">
     <img src="assets/images/menu.png" alt="Menu icon" /></div>
     <div class="btn info" onclick="sendCommand('info')">
     <img src="assets/images/info.png" alt="Info icon" /></div>
@@ -330,10 +372,10 @@
 <!-- Ligne 4 -->
 <div class="btn num num0" onclick="sendCommand('0')">0</div>
 
+<div class="btn retour"><a href="index.html">RETOUR</a></div>
 
-      <a href="index.html">
-  <img src="assets/images/retour-fr.png" class="btn retour" alt="Retour">
-</a>
+  <img src="assets/images/sabsystem.png" class="btn sabsystem" alt="Logo">
+
 
   </div>
   <script>
