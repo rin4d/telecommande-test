@@ -20,6 +20,239 @@
       background-color: #3A3A3A;
     }
 
+/* power */
+      .power-off {
+  background: linear-gradient(to bottom, #FF4D4D, #B30000);
+  border-radius: 50%;
+  box-shadow:
+    0px 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0px 2px 4px rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .power-off img {
+  width: 70%;
+  height: 60%;
+  object-fit: contain;
+  pointer-events: none; 
+  }
+
+  .power-on {
+  background: linear-gradient(to bottom, #33CC66, #0E5D2C);
+  border-radius: 50%;
+  box-shadow:
+    0px 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0px 2px 4px rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .power-on img {
+  width: 70%;
+  height: 60%;
+  object-fit: contain;
+  pointer-events: none; 
+  }
+
+  /* home et mute */
+  .home {
+  background: linear-gradient(to bottom, #6c6c6c, #3a3a3a);
+  border-radius: 50%;
+  box-shadow:
+    0px 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0px 2px 4px rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .home img {
+  width: 70%;
+  height: 60%;
+  object-fit: contain;
+  pointer-events: none; 
+  }
+
+    .mute {
+  background: linear-gradient(to bottom, #6c6c6c, #3a3a3a);
+  border-radius: 50%;
+  box-shadow:
+    0px 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0px 2px 4px rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+    .mute img {
+  width: 70%;
+  height: 60%;
+  object-fit: contain;
+  pointer-events: none; 
+  }
+
+  /* btn volume*/
+.volume, .chaine {
+  background: linear-gradient(to bottom, #6c6c6c, #3a3a3a);
+  border-radius: 12px; 
+  box-shadow:
+    0px 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0px 2px 4px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  position: absolute;
+}
+
+.chanup, .chandown {
+  color: white;
+  font-weight: bold;
+  font-size: 2.8vw; 
+  background: none; 
+  border: none;
+}
+
+.retour {
+  padding: 5px 0;
+  background: linear-gradient(to bottom, #64B2D4, #345D6E);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 1.1em;
+  text-align: center;
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.retour a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.retour a:visited {
+  color: white;
+}
+
+
+
+
+
+
+  /* Raccourci */
+
+    .menu {
+  background: linear-gradient(to bottom, #6c6c6c, #3a3a3a);
+  border-radius: 50%;
+  box-shadow:
+    0px 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0px 2px 4px rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+      .menu img {
+  width: 70%;
+  height: 60%;
+  object-fit: contain;
+  pointer-events: none; 
+  }
+
+      .info {
+  background: linear-gradient(to bottom, #6c6c6c, #3a3a3a);
+  border-radius: 50%;
+  box-shadow:
+    0px 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0px 2px 4px rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+      .info img {
+  width: 70%;
+  height: 60%;
+  object-fit: contain;
+  pointer-events: none; 
+  }
+
+.num {
+  position: absolute;
+  background: linear-gradient(to bottom, #6c6c6c, #3a3a3a);
+  border-radius: 50%; /* plus ovale */
+  box-shadow:
+    0px 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0px 2px 4px rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.6em;
+  cursor: pointer;
+  width: 17%;
+  height: 5%; 
+}
+
+.rond-direction {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44%;
+  aspect-ratio: 1/1;
+  background: linear-gradient(to bottom, #6c6c6c, #3a3a3a);
+  border-radius: 50%;
+  box-shadow:
+    0px 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0px 2px 4px rgba(255, 255, 255, 0.1);
+  z-index: 1;
+
+}
+.bouton-ok {
+  position: absolute;
+  top: 39%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 27%;
+  aspect-ratio: 1/1;
+  background: linear-gradient(to bottom, #4e4e4e, #2a2a2a);
+  border-radius: 50%;
+  box-shadow:
+    0px 2px 4px rgba(0, 0, 0, 0.3),
+    inset 0px 1px 2px rgba(255, 255, 255, 0.1);
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  z-index: 3;
+  cursor: pointer;
+  }
+
+  /* Flèches */
+.fleche {
+  background: linear-gradient(to bottom, #4e4e4e00, #2a2a2a00);
+  border-radius: 50%;
+  width: 15%;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6em;
+  z-index: 2;
+  cursor: pointer;
+}
+
+
+  
     .remote {
       position: relative;
       width: 100%;
@@ -39,82 +272,117 @@
 
     .power-off { top: 6%; left: 32%; transform: translateX(-50%); width: 16%; }
     .power-on  { top: 6%; left: 68%; transform: translateX(-50%); width: 16%; }
+    .rond-home      { top: 17%; left: 50%; transform: translateX(-50%); width: 14%; }
     .home      { top: 17%; left: 50%; transform: translateX(-50%); width: 14%; }
     .mute      { top: 25%; left: 50%; transform: translateX(-50%); width: 14%; }
 
-    .chaine    { top: 14%; left: 62%; width: 12%; }
+    .chaine    { top: 14%; left: 62%; width: 12%; height: 19%; }
     .chanup    { top: 16%; left: 64%; width: 9%; }
     .chandown  { top: 28%; left: 64%; width: 7%; }
 
-    .volume     { top: 14%; left: 26%; width: 12%; }
-    .volup     { top: 16%; left: 27%; width: 10%; }
-    .voldown   { top: 27%; left: 26%; width: 12%; }
+    .volume     { top: 14%; left: 26%; width: 12%; height: 19%; }
+    .volup     { top: 16%; left: 27%; width: 9%; }
+    .voldown   { top: 27%; left: 27%; width: 9%; }
 
     .rond-ok    { top: 35%; left: 50%; transform: translateX(-50%); width: 44%; z-index: 1; }
     .ok        { top: 39%; left: 50%; transform: translateX(-50%); width: 27%; z-index: 2; }
-    .arrow-up  { top: 35%; left: 50%; transform: translateX(-50%) rotate(90deg); width: 10%; }
-    .arrow-down{ top: 44%; left: 50%; transform: translateX(-50%) rotate(-90deg); width: 10%; }
-    .arrow-left{ top: 39%; left: 40%; transform: translateX(-50%) rotate(0deg); width: 10%; }
-    .arrow-right{ top: 39%; left: 60%; transform: translateX(-50%) rotate(180deg); width: 10%; }
+    .up    { top: 35%; left: 50%; transform: translateX(-50%); }
+    .down  { top: 51%; left: 50%; transform: translateX(-50%); }
+    .left  { top: 43%; left: 35%; transform: translateX(-50%); }
+    .right { top: 43%; left: 65%; transform: translateX(-50%); }
 
-    .shortcut1 { top: 57%; left: 32%; transform: translateX(-50%); width: 14%; }
-    .shortcut2 { top: 57%; left: 68%; transform: translateX(-50%); width: 14%; }
 
-    .num1 { top: 65%; left: 32%; transform: translateX(-50%); width: 16%; }
-    .num2 { top: 65%; left: 50%; transform: translateX(-50%); width: 16%; }
-    .num3 { top: 65%; left: 68%; transform: translateX(-50%); width: 16%; }
-    .num4 { top: 72%; left: 32%; transform: translateX(-50%); width: 16%; }
-    .num5 { top: 72%; left: 50%; transform: translateX(-50%); width: 16%; }
-    .num6 { top: 72%; left: 68%; transform: translateX(-50%); width: 16%; }
-    .num7 { top: 79%; left: 32%; transform: translateX(-50%); width: 16%; }
-    .num8 { top: 79%; left: 50%; transform: translateX(-50%); width: 16%; }
-    .num9 { top: 79%; left: 68%; transform: translateX(-50%); width: 16%; }
-    .num0 { top: 86%; left: 50%; transform: translateX(-50%); width: 16%; }
+    .menu { top: 57%; left: 32%; transform: translateX(-50%); width: 14%; }
+    .info { top: 57%; left: 68%; transform: translateX(-50%); width: 14%; }
 
+ .num1 { top: 65%; left: 32%; transform: translateX(-50%); width: 14%; aspect-ratio: 1/1; }
+.num2 { top: 65%; left: 50%; transform: translateX(-50%); width: 14%; aspect-ratio: 1/1; }
+.num3 { top: 65%; left: 68%; transform: translateX(-50%); width: 14%; aspect-ratio: 1/1; }
+
+.num4 { top: 72%; left: 32%; transform: translateX(-50%); width: 14%; aspect-ratio: 1/1; }
+.num5 { top: 72%; left: 50%; transform: translateX(-50%); width: 14%; aspect-ratio: 1/1; }
+.num6 { top: 72%; left: 68%; transform: translateX(-50%); width: 14%; aspect-ratio: 1/1; }
+
+.num7 { top: 79%; left: 32%; transform: translateX(-50%); width: 14%; aspect-ratio: 1/1; }
+.num8 { top: 79%; left: 50%; transform: translateX(-50%); width: 14%; aspect-ratio: 1/1; }
+.num9 { top: 79%; left: 68%; transform: translateX(-50%); width: 14%; aspect-ratio: 1/1; }
+
+.num0 { top: 86%; left: 50%; transform: translateX(-50%); width: 14%; aspect-ratio: 1/1; }
     
-    .retour { top: -4%; left: 50%; transform: translateX(-50%); width: 26%; }
+.retour { top: -5%; left: 50%; transform: translateX(-50%); width: 27%; }
+.sabsystem { top: 94%; left: 50%; transform: translateX(-50%); width: 18%; }
+  
   </style>
 </head>
 <body>
   <div class="remote">
     <img src="assets/images/fond.png" alt="télécommande" class="telecommande-bg">
-    <img src="assets/images/power-off.png" class="btn power-off" onclick="sendCommand('power_off')">
-    <img src="assets/images/power-on.png"  class="btn power-on" onclick="sendCommand('power_on')">
-    <img src="assets/images/home.png"      class="btn home" onclick="sendCommand('home')">
-    <img src="assets/images/mute.png"      class="btn mute" onclick="sendCommand('mute')">
+    
+    <div class="btn power-off" onclick="sendCommand('off')">
+    <img src="assets/images/power.png" alt="Power off icon" /></div>
 
-     <img src="assets/images/chaine.png" class="btn chaine">
-    <img src="assets/images/chanup.png" class="btn chanup" onclick="sendCommand('chanup')">
-    <img src="assets/images/chandown.png" class="btn chandown" onclick="sendCommand('chandown')">
+    <div class="btn power-on" onclick="sendCommand('on')">
+    <img src="assets/images/power.png" alt="Power on icon" /></div>
 
-        <img src="assets/images/volume.png" class="btn volume">
-    <img src="assets/images/volup.png" class="btn volup" onclick="sendCommand('volup')">
-    <img src="assets/images/voldown.png" class="btn voldown" onclick="sendCommand('voldown')">
+    
 
-    <img src="assets/images/ok.png" class="btn ok" onclick="sendCommand('enter')">
-    <img src="assets/images/rond-ok.png" class="btn rond-ok">
-    <img src="" class="btn arrow-up" onclick="sendCommand('up')">
-    <img src="" class="btn arrow-down" onclick="sendCommand('down')">
-    <img src="" class="btn arrow-left" onclick="sendCommand('left')">
-    <img src="" class="btn arrow-right" onclick="sendCommand('right')">
+    <div class="btn home" onclick="sendCommand('home')">
+    <img src="assets/images/home.png" alt="Home icon" /></div>
+     <div class="btn mute" onclick="sendCommand('mute')">
+    <img src="assets/images/mute.png" alt="Mute icon" /></div>
+    
+    <div class="btn chaine"></div>
+    <div class="btn chanup" onclick="sendCommand('chanup')">P+</div>
+    <div class="btn chandown" onclick="sendCommand('chandown')">P−</div>
 
-    <img src="assets/images/menu.png" class="btn shortcut1" onclick="sendCommand('shortcut1')">
-    <img src="assets/images/info.png" class="btn shortcut2" onclick="sendCommand('shortcut2')">
 
-    <img src="assets/images/1.png" class="btn num1" onclick="sendCommand('1')">
-    <img src="assets/images/2.png" class="btn num2" onclick="sendCommand('2')">
-    <img src="assets/images/3.png" class="btn num3" onclick="sendCommand('3')">
-    <img src="assets/images/4.png" class="btn num4" onclick="sendCommand('4')">
-    <img src="assets/images/5.png" class="btn num5" onclick="sendCommand('5')">
-    <img src="assets/images/6.png" class="btn num6" onclick="sendCommand('6')">
-    <img src="assets/images/7.png" class="btn num7" onclick="sendCommand('7')">
-    <img src="assets/images/8.png" class="btn num8" onclick="sendCommand('8')">
-    <img src="assets/images/9.png" class="btn num9" onclick="sendCommand('9')">
-    <img src="assets/images/0.png" class="btn num0" onclick="sendCommand('0')">
 
-      <a href="index.html">
-  <img src="assets/images/retour-fr.png" class="btn retour" alt="Retour">
-</a>
+    <div class="btn volume"></div>
+    <img src="assets/images/volup.png" class="btn volup" onclick="sendCommand('volup')" alt="volup icon" />
+    <img src="assets/images/voldown.png" class="btn voldown" onclick="sendCommand('voldown')"  alt="voldown icon" />
+
+
+<!-- Cercle central directionnel -->
+<div class="btn rond-direction"></div>
+
+<!-- Flèches autour -->
+<div class="btn fleche up" onclick="sendCommand('up')"></div>
+<div class="btn fleche down" onclick="sendCommand('down')"></div>
+<div class="btn fleche left" onclick="sendCommand('left')"></div>
+<div class="btn fleche right" onclick="sendCommand('right')"></div>
+
+
+<!-- Petit bouton OK au centre -->
+<div class="btn bouton-ok" onclick="sendCommand('enter')">OK</div>
+
+
+    <div class="btn menu" onclick="sendCommand('home')">
+    <img src="assets/images/menu.png" alt="Menu icon" /></div>
+    <div class="btn info" onclick="sendCommand('info')">
+    <img src="assets/images/info.png" alt="Info icon" /></div>
+
+<!-- Ligne 1 -->
+<div class="btn num num1" onclick="sendCommand('1')">1</div>
+<div class="btn num num2" onclick="sendCommand('2')">2</div>
+<div class="btn num num3" onclick="sendCommand('3')">3</div>
+
+<!-- Ligne 2 -->
+<div class="btn num num4" onclick="sendCommand('4')">4</div>
+<div class="btn num num5" onclick="sendCommand('5')">5</div>
+<div class="btn num num6" onclick="sendCommand('6')">6</div>
+
+<!-- Ligne 3 -->
+<div class="btn num num7" onclick="sendCommand('7')">7</div>
+<div class="btn num num8" onclick="sendCommand('8')">8</div>
+<div class="btn num num9" onclick="sendCommand('9')">9</div>
+
+<!-- Ligne 4 -->
+<div class="btn num num0" onclick="sendCommand('0')">0</div>
+
+<div class="btn retour"><a href="index.html">RETOUR</a></div>
+
+  <img src="assets/images/sabsystem.png" class="btn sabsystem" alt="Logo">
+
 
   </div>
   <script>
