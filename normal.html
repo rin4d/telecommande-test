@@ -238,14 +238,19 @@
   }
 
   /* Flèches */
-  .arrow {
-  position: absolute;
-  width: 10%;
-  height: auto;
-  object-fit: contain;
-  pointer-events: auto;
+.fleche {
+  background: linear-gradient(to bottom, #4e4e4e00, #2a2a2a00);
+  border-radius: 50%;
+  width: 15%;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6em;
   z-index: 2;
-  }
+  cursor: pointer;
+}
+
 
   
     .remote {
@@ -281,10 +286,11 @@
 
     .rond-ok    { top: 35%; left: 50%; transform: translateX(-50%); width: 44%; z-index: 1; }
     .ok        { top: 39%; left: 50%; transform: translateX(-50%); width: 27%; z-index: 2; }
-    .arrow-up  { top: 35%; left: 50%; transform: translateX(-50%) rotate(90deg); width: 10%; }
-    .arrow-down{ top: 44%; left: 50%; transform: translateX(-50%) rotate(-90deg); width: 10%; }
-    .arrow-left{ top: 39%; left: 40%; transform: translateX(-50%) rotate(0deg); width: 10%; }
-    .arrow-right{ top: 39%; left: 60%; transform: translateX(-50%) rotate(180deg); width: 10%; }
+    .up    { top: 35%; left: 50%; transform: translateX(-50%); }
+    .down  { top: 51%; left: 50%; transform: translateX(-50%); }
+    .left  { top: 43%; left: 35%; transform: translateX(-50%); }
+    .right { top: 43%; left: 65%; transform: translateX(-50%); }
+
 
     .menu { top: 57%; left: 32%; transform: translateX(-50%); width: 14%; }
     .info { top: 57%; left: 68%; transform: translateX(-50%); width: 14%; }
@@ -340,10 +346,11 @@
 <div class="btn rond-direction"></div>
 
 <!-- Flèches autour -->
-<img src="assets/images/arrow-up.png" class="btn arrow arrow-up" onclick="sendCommand('up')">
-<img src="assets/images/arrow-down.png" class="btn arrow arrow-down" onclick="sendCommand('down')">
-<img src="assets/images/arrow-left.png" class="btn arrow arrow-left" onclick="sendCommand('left')">
-<img src="assets/images/arrow-right.png" class="btn arrow arrow-right" onclick="sendCommand('right')">
+<div class="btn fleche up" onclick="sendCommand('up')"></div>
+<div class="btn fleche down" onclick="sendCommand('down')"></div>
+<div class="btn fleche left" onclick="sendCommand('left')"></div>
+<div class="btn fleche right" onclick="sendCommand('right')"></div>
+
 
 <!-- Petit bouton OK au centre -->
 <div class="btn bouton-ok" onclick="sendCommand('enter')">OK</div>
