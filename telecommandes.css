@@ -27,8 +27,8 @@
   }
 
   .power-off img {
-  width: 70%;
-  height: 60%;
+  width: 80%;
+  height: 80%;
   object-fit: contain;
   pointer-events: none; 
   }
@@ -45,8 +45,8 @@
   }
 
   .power-on img {
-  width: 70%;
-  height: 60%;
+  width: 80%;
+  height: 80%;
   object-fit: contain;
   pointer-events: none; 
   }
@@ -297,8 +297,8 @@
       position: absolute;
     }
 
-    .power-off { top: 6%; left: 32%; transform: translateX(-50%); width: 16%; }
-    .power-on  { top: 6%; left: 68%; transform: translateX(-50%); width: 16%; }
+    .power-off { top: 6%; left: 32%; transform: translateX(-50%); width: 16%;height: 5%; }
+    .power-on  { top: 6%; left: 68%; transform: translateX(-50%); width: 16%;height: 5%; }
     .rond-home      { top: 17%; left: 50%; transform: translateX(-50%); width: 14%; }
 
     .home      { top: 17%; left: 50%; transform: translateX(-50%); width: 14%; height: 5%; }
