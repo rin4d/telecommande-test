@@ -82,8 +82,8 @@
   }
 
     .mute img {
-  width: 70%;
-  height: 60%;
+  width: 80%;
+  height: 80%;
   object-fit: contain;
   pointer-events: none; 
   }
@@ -150,8 +150,8 @@
   }
 
       .menu img {
-  width: 70%;
-  height: 60%;
+  width: 80%;
+  height: 80%;
   object-fit: contain;
   pointer-events: none; 
   }
@@ -168,8 +168,8 @@
   }
 
       .info img {
-  width: 70%;
-  height: 60%;
+  width: 80%;
+  height: 80%;
   object-fit: contain;
   pointer-events: none; 
   }
@@ -300,12 +300,13 @@
     .power-off { top: 6%; left: 32%; transform: translateX(-50%); width: 16%; }
     .power-on  { top: 6%; left: 68%; transform: translateX(-50%); width: 16%; }
     .rond-home      { top: 17%; left: 50%; transform: translateX(-50%); width: 14%; }
+
     .home      { top: 17%; left: 50%; transform: translateX(-50%); width: 14%; height: 5%; }
-    .mute      { top: 25%; left: 50%; transform: translateX(-50%); width: 14%; }
+    .mute      { top: 25%; left: 50%; transform: translateX(-50%); width: 14%; height: 5%; }
 
     .chaine    { top: 14%; left: 62%; width: 12%; height: 19%; }
-    .chanup    { top: 16%; left: 64%; width: 9%; }
-    .chandown  { top: 28%; left: 64%; width: 5%; }
+    .chanup    { top: 15%; left: 64%; width: 9%; height: 5%; }
+    .chandown  { top: 27%; left: 66%; width: 4%; height: 4%;}
 
     .volume     { top: 14%; left: 26%; width: 12%; height: 19%; }
     .volup     { top: 16%; left: 27%; width: 9%; }
@@ -319,8 +320,8 @@
     .right { top: 43%; left: 65%; transform: translateX(-50%); }
 
 
-    .menu { top: 57%; left: 32%; transform: translateX(-50%); width: 14%; }
-    .info { top: 57%; left: 68%; transform: translateX(-50%); width: 14%; }
+    .menu { top: 57%; left: 32%; transform: translateX(-50%); width: 14%;height: 5%; }
+    .info { top: 57%; left: 68%; transform: translateX(-50%); width: 14%; height: 5%;}
 
     .soustitres { top: 58%; left: 50%; transform: translateX(-50%); width: 46%; height: 5%;}
     .audiodescription { top: 58%; left: 50%; transform: translateX(-50%); width: 53%; height: 5%;}
