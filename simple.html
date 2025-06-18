@@ -7,56 +7,53 @@
   <link rel="stylesheet" href="telecommandes.css">
 </head>
 <body>
-   <div class="remote">
-    <img src="assets/images/fond.png" alt="télécommande" class="telecommande-bg">
+  <div class="remote">
+  <img src="assets/images/fond.png" alt="télécommande" class="telecommande-bg">
     
-    <div class="btn power-off" onclick="sendCommand('off')">
-    <img src="assets/images/power.png" alt="Power off icon" /></div>
+  <div class="btn power-off" onclick="sendCommand('off')">
+  <img src="assets/images/power.png" alt="Power off icon" /></div>
 
-    <div class="btn power-on" onclick="sendCommand('on')">
-    <img src="assets/images/power.png" alt="Power on icon" /></div>
-
+  <div class="btn power-on" onclick="sendCommand('on')">
+  <img src="assets/images/power.png" alt="Power on icon" /></div>
+  
+  <div class="btn home" onclick="sendCommand('home')">
+  <img src="assets/images/home.png" alt="Home icon" /></div>
+  <div class="btn mute" onclick="sendCommand('mute')">
+  <img src="assets/images/mute.png" alt="Mute icon" /></div>
     
-
-    <div class="btn home" onclick="sendCommand('home')">
-    <img src="assets/images/home.png" alt="Home icon" /></div>
-     <div class="btn mute" onclick="sendCommand('mute')">
-    <img src="assets/images/mute.png" alt="Mute icon" /></div>
-    
-    <div class="btn chaine"></div>
-    <div class="btn chanup" onclick="sendCommand('chanup')">P+</div>
-    <div class="btn chandown" onclick="sendCommand('chandown')">P−</div>
+  <div class="btn chaine"></div>
+  <div class="btn chanup" onclick="sendCommand('chanup')">P+</div>
+  <div class="btn chandown" onclick="sendCommand('chandown')">P−</div>
 
 
 
-    <div class="btn volume"></div>
-    <img src="assets/images/volup.png" class="btn volup" onclick="sendCommand('volup')" alt="volup icon" />
-    <img src="assets/images/voldown.png" class="btn voldown" onclick="sendCommand('voldown')"  alt="voldown icon" />
+  <div class="btn volume"></div>
+  <img src="assets/images/volup.png" class="btn volup" onclick="sendCommand('volup')" alt="volup icon" />
+  <img src="assets/images/voldown.png" class="btn voldown" onclick="sendCommand('voldown')"  alt="voldown icon" />
 
 
-<!-- Cercle central directionnel -->
-<div class="btn rond-direction"></div>
+  <!-- Cercle central directionnel -->
+  <div class="btn rond-direction"></div>
 
-<!-- Flèches autour -->
-<div class="btn fleche up" onclick="sendCommand('up')"></div>
-<div class="btn fleche down" onclick="sendCommand('down')"></div>
-<div class="btn fleche left" onclick="sendCommand('left')"></div>
-<div class="btn fleche right" onclick="sendCommand('right')"></div>
-
-
-<!-- Petit bouton OK au centre -->
-<div class="btn bouton-ok" onclick="sendCommand('enter')">OK</div>
-
-    <div class="btn menu" onclick="sendCommand('home')">
-    <img src="assets/images/menu.png" alt="Menu icon" /></div>
-    <div class="btn info" onclick="sendCommand('info')">
-    <img src="assets/images/info.png" alt="Info icon" /></div>
+  <!-- Flèches autour -->
+  <div class="btn fleche up" onclick="sendCommand('up')"></div>
+  <div class="btn fleche down" onclick="sendCommand('down')"></div>
+  <div class="btn fleche left" onclick="sendCommand('left')"></div>
+  <div class="btn fleche right" onclick="sendCommand('right')"></div>
 
 
-<div class="btn retour"><a href="home.html">RETOUR</a></div>
+  <!-- Petit bouton OK au centre -->
+  <div class="btn bouton-ok" onclick="sendCommand('enter')">OK</div>
+
+  <div class="btn menu" onclick="sendCommand('home')">
+  <img src="assets/images/menu.png" alt="Menu icon" /></div>
+  <div class="btn info" onclick="sendCommand('info')">
+  <img src="assets/images/info.png" alt="Info icon" /></div>
+
+
+  <div class="btn retour"><a href="home.html">RETOUR</a></div>
 
   <img src="assets/images/sabsystem.png" class="btn sabsystem" alt="Logo">
-
   </div>
 
   <script>
