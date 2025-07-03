@@ -1,24 +1,291 @@
+// lang.js
+
 const translations = {
-    fr: {
-      title: "CHOISISSEZ VOTRE TÉLÉCOMMANDE :",
-      normal: "Télécommande classique",
-      hearing: "Télécommande auditive",
-      cognitive: "Télécommande simplifiée",
-      visual: "Télécommande visuelle adaptée",
-    },
-    en: {
-      title: "CHOOSE YOUR REMOTE CONTROL:",
-      normal: "Standard remote",
-      hearing: "Hearing accessible remote",
-      cognitive: "Simplified remote",
-      visual: "Visual accessible remote",
-    },
-    es: {
-      title: "ELIJA SU MANDO A DISTANCIA:",
-      normal: "Mando clásico",
-      hearing: "Mando auditivo",
-      cognitive: "Mando simplificado",
-      visual: "Mando visual adaptado",
-    }
-  };
+  fr: {
+    title: "CHOISISSEZ VOTRE TÉLÉCOMMANDE :",
+    "telecommande-classique": "Télécommande Standard",
+    "telecommande-malentendants": "Télécommande Malentendants",
+    "label-cognitive": "Télécommande Simplifiée",
+    "telecommande-malvoyants": "Télécommande Malvoyants",
+    back: "Retour",
+  },
+  en: {
+ title: "CHOOSE YOUR REMOTE CONTROL :",
+ "telecommande-classique":  "Standard Remote Control",
+ "telecommande-malentendants":  "Hearing Impaired Remote Control",
+ "label-cognitive": "Simplified Remote Control",
+ "telecommande-malvoyants":  "Visually Impaired Remote Control",
+ back: "Back",
+  },
+  es: {
+    title: "ELIGE TU MANDO A DISTANCIA :",
+    "telecommande-classique": "Mando clásico",
+    "telecommande-malentendants": "Mando auditivo",
+    "label-cognitive": "Mando simplificado",
+    "telecommande-malvoyants": "Mando visual adaptado"
+  },
+
+  ar: {
+    title: "اختر جهاز التحكم عن بعد الخاص بك:",
+    "telecommande-classique": "معيار",
+    "telecommande-malentendants": "ضعف السمع",
+    "label-cognitive": "مبسط",
+    "telecommande-malvoyants": "ضعاف البصر"
+  },
+
+    bg: {
+    title:  "Стандартно дистанционно управление",
+    "telecommande-classique": "Дистанционно управление за хора с увреден слух",
+    "telecommande-malentendants": "Опростено дистанционно управление",
+    "label-cognitive": "Дистанционно управление за хора със зрителни увреждания",
+    "telecommande-malvoyants":  "Дистанционно управление за хора със зрителни увреждания",
+  },
   
+  bs:{
+  title: "IZABERI SVOJ DALJINSKI UPRAVLJAČ:",
+  "telecommande-classique":"Standardni daljinski",
+  "telecommande-malentendants":"Daljinski za osobe s oštećenim sluhom",
+  "label-cognitive": "Pojednostavljeni daljinski",
+  "telecommande-malvoyants":"Daljinski za osobe s oštećenim vidom",
+  back: "Nazad",
+},
+
+  cs: {
+    title: "VYBERTE SI DÁLKOVÝ OVLADAČ:",
+    "telecommande-classique": "Standardní ovladač",
+    "telecommande-malentendants": "Ovladač pro osoby se sluchovým postižením",
+    "label-cognitive": "Zjednodušený ovladač",
+    "telecommande-malvoyants":  "Ovladač pro osoby se zrakovým postižením",
+    back: "Zpět",
+  },
+
+da: {
+  title: "VÆLG DIN FJERNBETJENING:",
+  "telecommande-classique": "Standardfjernbetjening",
+  "telecommande-malentendants": "Fjernbetjening til hørehæmmede",
+  "label-cognitive": "Forenklet fjernbetjening",
+  "telecommande-malvoyants": "Fjernbetjening til synshæmmede",
+  back: "Tilbage",
+},
+
+de: {
+  title: "WÄHLEN SIE IHRE FERNBEDIENUNG:",
+  "telecommande-classique": "Standardfernbedienung",
+  "telecommande-malentendants": "Fernbedienung für Hörgeschädigte",
+  "label-cognitive": "Vereinfachte Fernbedienung",
+  "telecommande-malvoyants": "Fernbedienung für Sehgeschädigte",
+  back: "Zurück",
+},
+
+el: {
+  title: "ΕΠΙΛΕΞΤΕ ΤΟ ΤΗΛΕΧΕΙΡΙΣΤΗΡΙΟ ΣΑΣ:",
+  "telecommande-classique": "Τυπικό τηλεχειριστήριο",
+  "telecommande-malentendants": "Τηλεχειριστήριο για άτομα με προβλήματα ακοής",
+  "label-cognitive": "Απλοποιημένο τηλεχειριστήριο",
+  "telecommande-malvoyants": "Τηλεχειριστήριο για άτομα με προβλήματα όρασης",
+  back: "Πίσω",
+},
+
+fa: {
+  title: "ریموت کنترل خود را انتخاب کنید:",
+  "telecommande-classique": "ریموت کنترل استاندارد",
+  "telecommande-malentendants": "ریموت برای افراد با مشکلات شنوایی",
+  "label-cognitive": "ریموت ساده‌شده",
+  "telecommande-malvoyants": "ریموت برای افراد با مشکلات بینایی",
+  back: "برگشت",
+},
+
+fi: {
+  title: "VALITSE KAUKOSÄÄDIN:",
+  "telecommande-classique": "Vakio kaukosäädin",
+  "telecommande-malentendants": "Kaukosäädin kuulovammaisille",
+  "label-cognitive": "Yksinkertaistettu kaukosäädin",
+  "telecommande-malvoyants": "Kaukosäädin näkövammaisille",
+  back: "Takaisin",
+},
+
+he: {
+  title: "בחר את השלט שלך:",
+  "telecommande-classique": "שלט סטנדרטי",
+  "telecommande-malentendants": "שלט ללקויי שמיעה",
+  "label-cognitive": "שלט פשוט",
+  "telecommande-malvoyants": "שלט ללקויי ראייה",
+  back: "בְּחֲזָרָה",
+},
+
+hi: {
+  title: "अपना रिमोट चुनें:",
+  "telecommande-classique": "मानक रिमोट",
+  "telecommande-malentendants": "श्रवण बाधितों के लिए रिमोट",
+  "label-cognitive": "सरल रिमोट",
+  "telecommande-malvoyants": "दृष्टिबाधितों के लिए रिमोट",
+  back: "पीछे",
+},
+
+hr: {
+  title: "ODABERI SVOJ DALJINSKI:",
+  "telecommande-classique": "Standardni daljinski upravljač",
+  "telecommande-malentendants": "Daljinski za osobe s oštećenim sluhom",
+  "label-cognitive": "Pojednostavljeni daljinski upravljač",
+  "telecommande-malvoyants": "Daljinski za osobe s oštećenim vidom",
+  back: "Nazad",
+},
+hu: {
+  title: "VÁLASSZA KI A TÁVIRÁNYÍTÓT:",
+  "telecommande-classique": "Standard távirányító",
+  "telecommande-malentendants": "Távirányító hallássérülteknek",
+  "label-cognitive": "Egyszerűsített távirányító",
+  "telecommande-malvoyants": "Távirányító látássérülteknek",
+  back: "Vissza",
+},
+it: {
+  title: "SCEGLI IL TUO TELECOMANDO:",
+  "telecommande-classique": "Telecomando standard",
+  "telecommande-malentendants": "Telecomando per ipoudenti",
+  "label-cognitive": "Telecomando semplificato",
+  "telecommande-malvoyants": "Telecomando per ipovedenti",
+  back: "Indietro",
+},
+ja: {
+  title: "リモコンを選択してください：",
+  "telecommande-classique": "標準リモコン",
+  "telecommande-malentendants": "聴覚障害者用リモコン",
+  "label-cognitive": "簡易リモコン",
+  "telecommande-malvoyants": "視覚障害者用リモコン",
+  back: "戻る",
+},
+ko: {
+  title: "리모컨을 선택하세요:",
+  "telecommande-classique": "표준 리모컨",
+  "telecommande-malentendants": "청각 장애인을 위한 리모컨",
+  "label-cognitive": "간단한 리모컨",
+  "telecommande-malvoyants": "시각 장애인을 위한 리모컨",
+  back: "뒤로",
+},
+nl: {
+  title: "KIES JE AFSTANDSBEDIENING:",
+  "telecommande-classique": "Standaard afstandsbediening",
+  "telecommande-malentendants": "Afstandsbediening voor slechthorenden",
+  "label-cognitive": "Vereenvoudigde afstandsbediening",
+  "telecommande-malvoyants": "Afstandsbediening voor slechtzienden",
+  back: "Terug",
+},
+no: {
+  title: "VELG DIN FJERNKONTROLL:",
+  "telecommande-classique": "Standard fjernkontroll",
+  "telecommande-malentendants": "Fjernkontroll for hørselshemmede",
+  "label-cognitive": "Forenklet fjernkontroll",
+  "telecommande-malvoyants": "Fjernkontroll for synshemmede",
+  back: "Tilbake",
+},
+pl: {
+  title: "WYBIERZ SWÓJ PILOT:",
+  "telecommande-classique": "Standardowy pilot",
+  "telecommande-malentendants": "Pilot dla niedosłyszących",
+  "label-cognitive": "Uproszczony pilot",
+  "telecommande-malvoyants": "Pilot dla niedowidzących",
+  back: "Wstecz",
+},
+pt: {
+  title: "ESCOLHA O SEU CONTROLE REMOTO:",
+  "telecommande-classique": "Controle remoto padrão",
+  "telecommande-malentendants": "Controle remoto para deficientes auditivos",
+  "label-cognitive": "Controle remoto simplificado",
+  "telecommande-malvoyants": "Controle remoto para deficientes visuais",
+  back: "Voltar",
+},
+ro: {
+  title: "ALEGE TELECOMANDA:",
+  "telecommande-classique": "Telecomandă standard",
+  "telecommande-malentendants": "Telecomandă pentru persoane cu deficiențe de auz",
+  "label-cognitive": "Telecomandă simplificată",
+  "telecommande-malvoyants": "Telecomandă pentru persoane cu deficiențe de vedere",
+  back: "Înapoi",
+},
+ru: {
+  title: "ВЫБЕРИТЕ СВОЙ ПУЛЬТ ДИСТАНЦИОННОГО УПРАВЛЕНИЯ:",
+  "telecommande-classique": "Стандартный пульт",
+  "telecommande-malentendants": "Пульт для людей с нарушением слуха",
+  "label-cognitive": "Упрощённый пульт",
+  "telecommande-malvoyants": "Пульт для людей с нарушением зрения",
+  back: "Назад",
+},
+sk: {
+  title: "VYBERTE SI DIAĽKOVÉ OVLÁDANIE:",
+  "telecommande-classique": "Štandardné diaľkové ovládanie",
+  "telecommande-malentendants": "Diaľkové ovládanie pre sluchovo postihnutých",
+  "label-cognitive": "Zjednodušené diaľkové ovládanie",
+  "telecommande-malvoyants": "Diaľkové ovládanie pre zrakovo postihnutých",
+  back: "Späť",
+},
+sl: {
+  title: "IZBERITE SVOJ DALJINSKI UPRAVLJALNIK:",
+  "telecommande-classique": "Standardni daljinski upravljalnik",
+  "telecommande-malentendants": "Daljinski upravljalnik za naglušne osebe",
+  "label-cognitive": "Poenostavljen daljinski upravljalnik",
+  "telecommande-malvoyants": "Daljinski upravljalnik za slabovidne osebe",
+  back: "Nazaj",
+},
+sr: {
+  title: "ИЗАБЕРИТЕ СВОЈ ДАЉИНСКИ УПРАВЉАЧ:",
+  "telecommande-classique": "Стандардни даљински управљач",
+  "telecommande-malentendants": "Даљински за особе са оштећеним слухом",
+  "label-cognitive": "Поједностављени даљински управљач",
+  "telecommande-malvoyants": "Даљински за особе са оштећеним видом",
+  back: "Назад",
+},
+sv: {
+  title: "VÄLJ DIN FJÄRRKONTROLL:",
+  "telecommande-classique": "Standardfjärrkontroll",
+  "telecommande-malentendants": "Fjärrkontroll för hörselskadade",
+  "label-cognitive": "Förenklad fjärrkontroll",
+  "telecommande-malvoyants": "Fjärrkontroll för synskadade",
+  back: "Tillbaka",
+},
+tr: {
+  title: "UZAKTAN KUMANDANIZI SEÇİN:",
+  "telecommande-classique": "Standart uzaktan kumanda",
+  "telecommande-malentendants": "İşitme engelliler için uzaktan kumanda",
+  "label-cognitive": "Basitleştirilmiş uzaktan kumanda",
+  "telecommande-malvoyants": "Görme engelliler için uzaktan kumanda",
+  back: "Geri",
+},
+zh: {
+  title: "请选择您的遥控器：",
+  "telecommande-classique": "标准遥控器",
+  "telecommande-malentendants": "听障人士遥控器",
+  "label-cognitive": "简化遥控器",
+  "telecommande-malvoyants": "视障人士遥控器",
+  back: "返回",
+},
+
+
+
+
+
+
+
+};
+function applyTranslations(lang) {
+  const dict = translations[lang] || translations["fr"];
+  for (const key in dict) {
+    const el = document.getElementById(key);
+    if (el) el.textContent = dict[key];
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const selector = document.getElementById("language-selector");
+
+  const savedLang = localStorage.getItem("lang") || "fr";
+  selector.value = savedLang;
+
+  applyTranslations(savedLang);
+
+  selector.addEventListener("change", () => {
+    const lang = selector.value;
+    localStorage.setItem("lang", lang);
+    applyTranslations(lang);
+  });
+});
+

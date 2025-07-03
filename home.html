@@ -111,13 +111,42 @@
 <body>
   <div class="container">
     <header>
-      <div class="language-menu">
-        <select id="language-selector">
-          <option value="fr">🇫🇷 Français</option>
-          <option value="en">🇬🇧 English</option>
-          <option value="es">🇪🇸 Español</option>
-        </select>
-      </div>
+<div class="language-menu">
+  <select id="language-selector">
+    <option value="ar">🇸🇦 Arabe</option>
+    <option value="bg">🇧🇬 Bulgare</option>
+    <option value="bs">🇧🇦 Bosnien</option>
+    <option value="cs">🇨🇿 Tchèque</option>
+    <option value="da">🇩🇰 Danois</option>
+    <option value="de">🇩🇪 Allemand</option>
+    <option value="el">🇬🇷 Grec</option>
+    <option value="en">🇬🇧 Anglais</option>
+    <option value="es">🇪🇸 Espagnol</option>
+    <option value="fa">🇮🇷 Persan</option>
+    <option value="fi">🇫🇮 Finnois</option>
+    <option value="fr" selected>🇫🇷 Français</option>
+    <option value="he">🇮🇱 Hébreu</option>
+    <option value="hi">🇮🇳 Hindi</option>
+    <option value="hr">🇭🇷 Croate</option>
+    <option value="hu">🇭🇺 Hongrois</option>
+    <option value="it">🇮🇹 Italien</option>
+    <option value="ja">🇯🇵 Japonais</option>
+    <option value="ko">🇰🇷 Coréen</option>
+    <option value="nl">🇳🇱 Néerlandais</option>
+    <option value="no">🇳🇴 Norvégien</option>
+    <option value="pl">🇵🇱 Polonais</option>
+    <option value="pt">🇵🇹 Portugais</option>
+    <option value="ro">🇷🇴 Roumain</option>
+    <option value="ru">🇷🇺 Russe</option>
+    <option value="sk">🇸🇰 Slovaque</option>
+    <option value="sl">🇸🇮 Slovène</option>
+    <option value="sr">🇷🇸 Serbe</option>
+    <option value="sv">🇸🇪 Suédois</option>
+    <option value="tr">🇹🇷 Turc</option>
+    <option value="zh">🇨🇳 Chinois</option>
+  </select>
+</div>
+
       <div class="logo-placeholder"></div>
     </header>
 
@@ -127,29 +156,29 @@
       <div class="button-list">
         <a href="normal.html" class="remote-button">
           <img src="assets/images/sweet/normal.png.png" alt="">
-          <span class="remote-label" id="label-normal">Télécommande classique</span>
+          <span class="remote-label" id="telecommande-classique">Télécommande Standart</span>
         </a>
 
-        <a href="auditive.html" class="remote-button">
+                <a href="malvoyants.html" class="remote-button">
+          <img src="assets/images/sweet/visual.png.png" alt="">
+          <span class="remote-label" id="telecommande-malvoyants">Télécommande Malvoyants</span>
+        </a>
+
+        <a href="malentendants.html" class="remote-button">
           <img src="assets/images/sweet/hearing.png.png" alt="">
-          <span class="remote-label" id="label-hearing">Télécommande auditive</span>
+          <span class="remote-label" id="telecommande-malentendants">Télécommande Malentendants</span>
         </a>
 
         <a href="simple.html" class="remote-button">
           <img src="assets/images/sweet/cognitive.png.png" alt="">
-          <span class="remote-label" id="label-cognitive">Télécommande simplifiée</span>
-        </a>
-
-        <a href="malvoyants.html" class="remote-button">
-          <img src="assets/images/sweet/visual.png.png" alt="">
-          <span class="remote-label" id="label-visual">Télécommande visuelle adaptée</span>
+          <span class="remote-label" id="label-cognitive">Télécommande Simplifiée</span>
         </a>
       </div>
     </main>
 
     <script src="lang.js"></script>
-    <script src="script2.js"></script>
-    <script src="lang-link.js"></script>
+<script src="lang.js" defer></script>
+
   </div>
 </body>
 </html>
