@@ -327,33 +327,43 @@ zh: {
   back: "返回",
 },
 
-
-
-
-
-
-
 };
+// Fonction d’application des traductions
 function applyTranslations(lang) {
   const dict = translations[lang] || translations["fr"];
   for (const key in dict) {
     const el = document.getElementById(key);
-    if (el) el.textContent = dict[key];
+    if (el) {
+      if (key === "back") {
+        el.innerHTML = `<a href="home.html">${dict[key]}</a>`;
+      } else {
+        el.textContent = dict[key];
+      }
+    }
   }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   const selector = document.getElementById("language-selector");
 
-  const savedLang = localStorage.getItem("lang") || "fr";
-  selector.value = savedLang;
-
-  applyTranslations(savedLang);
-
-  selector.addEventListener("change", () => {
-    const lang = selector.value;
+  // Langue sauvegardée ou détectée
+  let lang = localStorage.getItem("lang");
+  if (!lang) {
+    const userLang = navigator.language.slice(0, 2);
+    lang = translations[userLang] ? userLang : "fr";
     localStorage.setItem("lang", lang);
-    applyTranslations(lang);
-  });
+  }
+
+  // Appliquer la langue au chargement
+  applyTranslations(lang);
+
+  if (selector) {
+    selector.value = lang;
+    selector.addEventListener("change", () => {
+      const selectedLang = selector.value;
+      localStorage.setItem("lang", selectedLang);
+      applyTranslations(selectedLang);
+    });
+  }
 });
 
