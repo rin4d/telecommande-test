@@ -11,63 +11,65 @@
   <div class="remote">
     <img src="assets/images/fond.png" alt="télécommande" class="telecommande-bg">
     
-    <div class="btn power-off" onclick="sendCommand('off')">
+    <div class="btn power-off" onclick="sendCommand('off')" role="button" tabindex="0" aria-label="Éteindre">
       <img src="assets/images/power.png" alt="Power off icon" />
     </div>
 
-    <div class="btn power-on" onclick="sendCommand('on')">
+    <div class="btn power-on" onclick="sendCommand('on')" role="button" tabindex="0" aria-label="Allumer">
       <img src="assets/images/power.png" alt="Power on icon" />
     </div>
 
-    <div class="btn home" onclick="sendCommand('home')">
+    <div class="btn home" onclick="sendCommand('home')" role="button" tabindex="0" aria-label="Accueil">
       <img src="assets/images/home.png" alt="Home icon" />
     </div>
 
-    <div class="btn mute" onclick="sendCommand('mute')">
+    <div class="btn mute" onclick="sendCommand('mute')" role="button" tabindex="0" aria-label="Muet">
       <img src="assets/images/mute.png" alt="Mute icon" />
     </div>
     
     <div class="btn chaine"></div>
-    <div class="btn chanup" onclick="sendCommand('chanup')">P+</div>
-    <div class="btn chandown" onclick="sendCommand('chandown')">P−</div>
+    <div class="btn chanup" onclick="sendCommand('chanup')" role="button" tabindex="0" aria-label="Chaîne suivante">P+</div>
+    <div class="btn chandown" onclick="sendCommand('chandown')" role="button" tabindex="0" aria-label="Chaîne précédente">P−</div>
 
     <div class="btn volume"></div>
-    <img src="assets/images/volup.png" class="btn volup" onclick="sendCommand('volup')" alt="volup icon" />
-    <img src="assets/images/voldown.png" class="btn voldown" onclick="sendCommand('voldown')" alt="voldown icon" />
+    <img src="assets/images/volup.png" class="btn volup" onclick="sendCommand('volup')" alt="volup icon" role="button" tabindex="0" aria-label="Volume +">
+    <img src="assets/images/voldown.png" class="btn voldown" onclick="sendCommand('voldown')" alt="voldown icon" role="button" tabindex="0" aria-label="Volume -">
 
     <div class="btn rond-direction"></div>
+    <div class="btn fleche up" onclick="sendCommand('up')" role="button" tabindex="0" aria-label="Haut"></div>
+    <div class="btn fleche down" onclick="sendCommand('down')" role="button" tabindex="0" aria-label="Bas"></div>
+    <div class="btn fleche left" onclick="sendCommand('left')" role="button" tabindex="0" aria-label="Gauche"></div>
+    <div class="btn fleche right" onclick="sendCommand('right')" role="button" tabindex="0" aria-label="Droite"></div>
 
-    <div class="btn fleche up" onclick="sendCommand('up')"></div>
-    <div class="btn fleche down" onclick="sendCommand('down')"></div>
-    <div class="btn fleche left" onclick="sendCommand('left')"></div>
-    <div class="btn fleche right" onclick="sendCommand('right')"></div>
+    <div class="btn bouton-ok" onclick="sendCommand('enter')" role="button" tabindex="0" aria-label="OK">OK</div>
 
-    <div class="btn bouton-ok" onclick="sendCommand('enter')">OK</div>
-
-    <div class="btn menu" onclick="sendCommand('home')">
+    <div class="btn menu" onclick="sendCommand('home')" role="button" tabindex="0" aria-label="Menu">
       <img src="assets/images/menu.png" alt="Menu icon" />
     </div>
-    <div class="btn info" onclick="sendCommand('info')">
+
+    <div class="btn info" onclick="sendCommand('info')" role="button" tabindex="0" aria-label="Infos">
       <img src="assets/images/info.png" alt="Info icon" />
     </div>
 
     <!-- Pavé numérique -->
-    <div class="btn num num1" onclick="sendCommand('1')">1</div>
-    <div class="btn num num2" onclick="sendCommand('2')">2</div>
-    <div class="btn num num3" onclick="sendCommand('3')">3</div>
+    <div class="btn num num1" onclick="sendCommand('1')" role="button" tabindex="0" aria-label="1">1</div>
+    <div class="btn num num2" onclick="sendCommand('2')" role="button" tabindex="0" aria-label="2">2</div>
+    <div class="btn num num3" onclick="sendCommand('3')" role="button" tabindex="0" aria-label="3">3</div>
 
-    <div class="btn num num4" onclick="sendCommand('4')">4</div>
-    <div class="btn num num5" onclick="sendCommand('5')">5</div>
-    <div class="btn num num6" onclick="sendCommand('6')">6</div>
+    <div class="btn num num4" onclick="sendCommand('4')" role="button" tabindex="0" aria-label="4">4</div>
+    <div class="btn num num5" onclick="sendCommand('5')" role="button" tabindex="0" aria-label="5">5</div>
+    <div class="btn num num6" onclick="sendCommand('6')" role="button" tabindex="0" aria-label="6">6</div>
 
-    <div class="btn num num7" onclick="sendCommand('7')">7</div>
-    <div class="btn num num8" onclick="sendCommand('8')">8</div>
-    <div class="btn num num9" onclick="sendCommand('9')">9</div>
+    <div class="btn num num7" onclick="sendCommand('7')" role="button" tabindex="0" aria-label="7">7</div>
+    <div class="btn num num8" onclick="sendCommand('8')" role="button" tabindex="0" aria-label="8">8</div>
+    <div class="btn num num9" onclick="sendCommand('9')" role="button" tabindex="0" aria-label="9">9</div>
 
-    <div class="btn num num0" onclick="sendCommand('0')">0</div>
+    <div class="btn num num0" onclick="sendCommand('0')" role="button" tabindex="0" aria-label="0">0</div>
 
     <!-- Bouton RETOUR dynamique -->
-    <div id="back" class="btn retour"><a href="home.html"></a></div>
+    <div id="back" class="btn retour" role="button" tabindex="0" aria-label="Retour">
+      <a href="home.html"></a>
+    </div>
 
     <img src="assets/images/sabsystem.png" class="btn sabsystem" alt="Logo">
   </div>
@@ -77,11 +79,9 @@
   <script src="script2.js"></script>
 
   <script>
-    // Appliquer la langue sauvegardée ou URL
     document.addEventListener("DOMContentLoaded", () => {
       const lang = localStorage.getItem("lang") || "fr";
       const dict = translations[lang] || translations["fr"];
-
       const elBack = document.querySelector(".retour a");
       if (elBack && dict.back) elBack.textContent = dict.back;
     });
