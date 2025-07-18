@@ -10,48 +10,51 @@
   <div class="remote">
     <img src="assets/images/fond.png" alt="télécommande" class="telecommande-bg">
     
-    <div class="btn power-off" onclick="sendCommand('off')">
-      <img src="assets/images/power.png" alt="Power off icon" />
+    <div class="btn power-off" onclick="sendCommand('off')" role="button" tabindex="0" aria-label="Éteindre la télévision">
+      <img src="assets/images/power.png" alt="" />
     </div>
 
-    <div class="btn power-on" onclick="sendCommand('on')">
-      <img src="assets/images/power.png" alt="Power on icon" />
+    <div class="btn power-on" onclick="sendCommand('on')" role="button" tabindex="0" aria-label="Allumer la télévision">
+      <img src="assets/images/power.png" alt="" />
     </div>
 
-    <div class="btn home" onclick="sendCommand('home')">
-      <img src="assets/images/home.png" alt="Home icon" />
+    <div class="btn home" onclick="sendCommand('home')" role="button" tabindex="0" aria-label="Accueil">
+      <img src="assets/images/home.png" alt="" />
     </div>
 
-    <div class="btn mute" onclick="sendCommand('mute')">
-      <img src="assets/images/mute.png" alt="Mute icon" />
+    <div class="btn mute" onclick="sendCommand('mute')" role="button" tabindex="0" aria-label="Couper le son">
+      <img src="assets/images/mute.png" alt="" />
     </div>
 
     <div class="btn chaine"></div>
-    <div class="btn chanup" onclick="sendCommand('chanup')">P+</div>
-    <div class="btn chandown" onclick="sendCommand('chandown')">P−</div>
+    <div class="btn chanup" onclick="sendCommand('chanup')" role="button" tabindex="0" aria-label="Chaîne suivante">P+</div>
+    <div class="btn chandown" onclick="sendCommand('chandown')" role="button" tabindex="0" aria-label="Chaîne précédente">P−</div>
 
     <div class="btn volume"></div>
-    <img src="assets/images/volup.png" class="btn volup" onclick="sendCommand('volup')" alt="volup icon" />
-    <img src="assets/images/voldown.png" class="btn voldown" onclick="sendCommand('voldown')" alt="voldown icon" />
+    <img src="assets/images/volup.png" class="btn volup" onclick="sendCommand('volup')" alt="" role="button" tabindex="0" aria-label="Augmenter le volume" />
+    <img src="assets/images/voldown.png" class="btn voldown" onclick="sendCommand('voldown')" alt="" role="button" tabindex="0" aria-label="Baisser le volume" />
 
     <div class="btn rond-direction"></div>
 
-    <div class="btn fleche up" onclick="sendCommand('up')"></div>
-    <div class="btn fleche down" onclick="sendCommand('down')"></div>
-    <div class="btn fleche left" onclick="sendCommand('left')"></div>
-    <div class="btn fleche right" onclick="sendCommand('right')"></div>
+    <div class="btn fleche up" onclick="sendCommand('up')" role="button" tabindex="0" aria-label="Direction haut"></div>
+    <div class="btn fleche down" onclick="sendCommand('down')" role="button" tabindex="0" aria-label="Direction bas"></div>
+    <div class="btn fleche left" onclick="sendCommand('left')" role="button" tabindex="0" aria-label="Direction gauche"></div>
+    <div class="btn fleche right" onclick="sendCommand('right')" role="button" tabindex="0" aria-label="Direction droite"></div>
 
-    <div class="btn bouton-ok" onclick="sendCommand('enter')">OK</div>
+    <div class="btn bouton-ok" onclick="sendCommand('enter')" role="button" tabindex="0" aria-label="Valider">OK</div>
 
-    <div class="btn menu" onclick="sendCommand('home')">
-      <img src="assets/images/menu.png" alt="Menu icon" />
+    <div class="btn menu" onclick="sendCommand('home')" role="button" tabindex="0" aria-label="Menu">
+      <img src="assets/images/menu.png" alt="" />
     </div>
-    <div class="btn info" onclick="sendCommand('info')">
-      <img src="assets/images/info.png" alt="Info icon" />
+
+    <div class="btn info" onclick="sendCommand('info')" role="button" tabindex="0" aria-label="Informations">
+      <img src="assets/images/info.png" alt="" />
     </div>
 
     <!-- RETOUR dynamique -->
-    <div id="back" class="btn retour"><a href="home.html"></a></div>
+    <div id="back" class="btn retour" role="button" tabindex="0" aria-label="Retour">
+      <a href="home.html"></a>
+    </div>
 
     <img src="assets/images/sabsystem.png" class="btn sabsystem" alt="Logo">
   </div>
