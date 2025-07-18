@@ -328,33 +328,26 @@ zh: {
 },
 
 };
-// Fonction d’application des traductions
+
 function applyTranslations(lang) {
   const dict = translations[lang] || translations["fr"];
   for (const key in dict) {
     const el = document.getElementById(key);
-    if (el) {
-      if (key === "back") {
-        el.innerHTML = `<a href="home.html">${dict[key]}</a>`;
-      } else {
-        el.textContent = dict[key];
-      }
-    }
+    if (el) el.textContent = dict[key];
   }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   const selector = document.getElementById("language-selector");
 
-  // Langue sauvegardée ou détectée
+  // Si aucune langue enregistrée, on prend celle du navigateur
   let lang = localStorage.getItem("lang");
   if (!lang) {
-    const userLang = navigator.language.slice(0, 2);
-    lang = translations[userLang] ? userLang : "fr";
+    const browserLang = navigator.language.slice(0, 2);
+    lang = translations[browserLang] ? browserLang : "fr";
     localStorage.setItem("lang", lang);
   }
 
-  // Appliquer la langue au chargement
   applyTranslations(lang);
 
   if (selector) {
@@ -366,4 +359,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
