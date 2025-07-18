@@ -7,7 +7,9 @@ const translations = {
     "telecommande-malentendants": "Télécommande Malentendants",
     "label-cognitive": "Télécommande Simplifiée",
     "telecommande-malvoyants": "Télécommande Malvoyants",
-    back: "Retour",
+    sous_titres: "SOUS-TITRES",
+    audiodescription: "AUDIODESCRIPTION",
+    back: "RETOUR",
   },
   en: {
  title: "CHOOSE YOUR REMOTE CONTROL :",
@@ -16,13 +18,19 @@ const translations = {
  "label-cognitive": "Simplified Remote Control",
  "telecommande-malvoyants":  "Visually Impaired Remote Control",
  back: "Back",
+  sous_titres: "SUBTITLES",
+  audiodescription: "AUDIO DESCRIPTION",
+  back: "Back",
   },
   es: {
     title: "ELIGE TU MANDO A DISTANCIA :",
     "telecommande-classique": "Mando clásico",
     "telecommande-malentendants": "Mando auditivo",
     "label-cognitive": "Mando simplificado",
-    "telecommande-malvoyants": "Mando visual adaptado"
+    "telecommande-malvoyants": "Mando visual adaptado",
+      sous_titres: "SUBTÍTULOS",
+  audiodescription: "AUDIODESCRIPCIÓN",
+  back: "Volver",
   },
 
   ar: {
@@ -30,7 +38,10 @@ const translations = {
     "telecommande-classique": "معيار",
     "telecommande-malentendants": "ضعف السمع",
     "label-cognitive": "مبسط",
-    "telecommande-malvoyants": "ضعاف البصر"
+    "telecommande-malvoyants": "ضعاف البصر",
+      sous_titres: "الترجمة",
+  audiodescription: "الوصف الصوتي",
+  back: "رجوع",
   },
 
     bg: {
@@ -39,6 +50,9 @@ const translations = {
     "telecommande-malentendants": "Опростено дистанционно управление",
     "label-cognitive": "Дистанционно управление за хора със зрителни увреждания",
     "telecommande-malvoyants":  "Дистанционно управление за хора със зрителни увреждания",
+      sous_titres: "СУБТИТРИ",
+  audiodescription: "АУДИООПИСАНИЕ",
+  back: "Назад",
   },
   
   bs:{
@@ -47,6 +61,8 @@ const translations = {
   "telecommande-malentendants":"Daljinski za osobe s oštećenim sluhom",
   "label-cognitive": "Pojednostavljeni daljinski",
   "telecommande-malvoyants":"Daljinski za osobe s oštećenim vidom",
+  sous_titres: "TITLOVI",
+  audiodescription: "AUDIODESKRIPCIJA",
   back: "Nazad",
 },
 
@@ -57,6 +73,9 @@ const translations = {
     "label-cognitive": "Zjednodušený ovladač",
     "telecommande-malvoyants":  "Ovladač pro osoby se zrakovým postižením",
     back: "Zpět",
+      sous_titres: "TITULKY",
+  audiodescription: "AUDIO POPIS",
+  back: "Zpět",
   },
 
 da: {
@@ -65,6 +84,8 @@ da: {
   "telecommande-malentendants": "Fjernbetjening til hørehæmmede",
   "label-cognitive": "Forenklet fjernbetjening",
   "telecommande-malvoyants": "Fjernbetjening til synshæmmede",
+    sous_titres: "UNDERTEKSTER",
+  audiodescription: "LYDBESKRIVELSE",
   back: "Tilbage",
 },
 
@@ -74,7 +95,10 @@ de: {
   "telecommande-malentendants": "Fernbedienung für Hörgeschädigte",
   "label-cognitive": "Vereinfachte Fernbedienung",
   "telecommande-malvoyants": "Fernbedienung für Sehgeschädigte",
+  sous_titres: "UNTERTITEL",
+  audiodescription: "AUDIODESKRIPTION",
   back: "Zurück",
+
 },
 
 el: {
@@ -83,6 +107,8 @@ el: {
   "telecommande-malentendants": "Τηλεχειριστήριο για άτομα με προβλήματα ακοής",
   "label-cognitive": "Απλοποιημένο τηλεχειριστήριο",
   "telecommande-malvoyants": "Τηλεχειριστήριο για άτομα με προβλήματα όρασης",
+  sous_titres: "ΥΠΟΤΙΤΛΟΙ",
+  audiodescription: "ΗΧΗΤΙΚΗ ΠΕΡΙΓΡΑΦΗ",
   back: "Πίσω",
 },
 
@@ -92,6 +118,8 @@ fa: {
   "telecommande-malentendants": "ریموت برای افراد با مشکلات شنوایی",
   "label-cognitive": "ریموت ساده‌شده",
   "telecommande-malvoyants": "ریموت برای افراد با مشکلات بینایی",
+  sous_titres: "زیرنویس",
+  audiodescription: "توصیف صوتی",
   back: "برگشت",
 },
 
@@ -101,6 +129,8 @@ fi: {
   "telecommande-malentendants": "Kaukosäädin kuulovammaisille",
   "label-cognitive": "Yksinkertaistettu kaukosäädin",
   "telecommande-malvoyants": "Kaukosäädin näkövammaisille",
+  sous_titres: "TEKSTITYKSET",
+  audiodescription: "AUDIOKUVAUS",
   back: "Takaisin",
 },
 
@@ -110,6 +140,8 @@ he: {
   "telecommande-malentendants": "שלט ללקויי שמיעה",
   "label-cognitive": "שלט פשוט",
   "telecommande-malvoyants": "שלט ללקויי ראייה",
+  sous_titres: "כתוביות",
+  audiodescription: "תיאור קולי",
   back: "בְּחֲזָרָה",
 },
 
@@ -119,6 +151,8 @@ hi: {
   "telecommande-malentendants": "श्रवण बाधितों के लिए रिमोट",
   "label-cognitive": "सरल रिमोट",
   "telecommande-malvoyants": "दृष्टिबाधितों के लिए रिमोट",
+  sous_titres: "उपशीर्षक",
+  audiodescription: "ऑडियो विवरण",
   back: "पीछे",
 },
 
@@ -128,6 +162,8 @@ hr: {
   "telecommande-malentendants": "Daljinski za osobe s oštećenim sluhom",
   "label-cognitive": "Pojednostavljeni daljinski upravljač",
   "telecommande-malvoyants": "Daljinski za osobe s oštećenim vidom",
+  sous_titres: "TITLOVI",
+  audiodescription: "AUDIODESKRIPCIJA",
   back: "Nazad",
 },
 hu: {
@@ -136,6 +172,8 @@ hu: {
   "telecommande-malentendants": "Távirányító hallássérülteknek",
   "label-cognitive": "Egyszerűsített távirányító",
   "telecommande-malvoyants": "Távirányító látássérülteknek",
+  sous_titres: "FELIRATOK",
+  audiodescription: "HANGOS LEÍRÁS",
   back: "Vissza",
 },
 it: {
@@ -144,6 +182,8 @@ it: {
   "telecommande-malentendants": "Telecomando per ipoudenti",
   "label-cognitive": "Telecomando semplificato",
   "telecommande-malvoyants": "Telecomando per ipovedenti",
+  sous_titres: "SOTTOTITOLI",
+  audiodescription: "AUDIODESCRIZIONE",
   back: "Indietro",
 },
 ja: {
@@ -152,6 +192,8 @@ ja: {
   "telecommande-malentendants": "聴覚障害者用リモコン",
   "label-cognitive": "簡易リモコン",
   "telecommande-malvoyants": "視覚障害者用リモコン",
+  sous_titres: "字幕",
+  audiodescription: "音声解説",
   back: "戻る",
 },
 ko: {
@@ -160,6 +202,8 @@ ko: {
   "telecommande-malentendants": "청각 장애인을 위한 리모컨",
   "label-cognitive": "간단한 리모컨",
   "telecommande-malvoyants": "시각 장애인을 위한 리모컨",
+  sous_titres: "자막",
+  audiodescription: "오디오 설명",
   back: "뒤로",
 },
 nl: {
@@ -168,6 +212,8 @@ nl: {
   "telecommande-malentendants": "Afstandsbediening voor slechthorenden",
   "label-cognitive": "Vereenvoudigde afstandsbediening",
   "telecommande-malvoyants": "Afstandsbediening voor slechtzienden",
+  sous_titres: "ONDERTITELS",
+  audiodescription: "AUDIODESCRIPTIE",
   back: "Terug",
 },
 no: {
@@ -176,6 +222,8 @@ no: {
   "telecommande-malentendants": "Fjernkontroll for hørselshemmede",
   "label-cognitive": "Forenklet fjernkontroll",
   "telecommande-malvoyants": "Fjernkontroll for synshemmede",
+  sous_titres: "TEKSTING",
+  audiodescription: "LYDBESKRIVELSE",
   back: "Tilbake",
 },
 pl: {
@@ -184,6 +232,8 @@ pl: {
   "telecommande-malentendants": "Pilot dla niedosłyszących",
   "label-cognitive": "Uproszczony pilot",
   "telecommande-malvoyants": "Pilot dla niedowidzących",
+  sous_titres: "NAPISY",
+  audiodescription: "AUDIOOPIS",
   back: "Wstecz",
 },
 pt: {
@@ -192,6 +242,8 @@ pt: {
   "telecommande-malentendants": "Controle remoto para deficientes auditivos",
   "label-cognitive": "Controle remoto simplificado",
   "telecommande-malvoyants": "Controle remoto para deficientes visuais",
+  sous_titres: "LEGENDAS",
+  audiodescription: "AUDIODESCRIÇÃO",
   back: "Voltar",
 },
 ro: {
@@ -200,6 +252,8 @@ ro: {
   "telecommande-malentendants": "Telecomandă pentru persoane cu deficiențe de auz",
   "label-cognitive": "Telecomandă simplificată",
   "telecommande-malvoyants": "Telecomandă pentru persoane cu deficiențe de vedere",
+  sous_titres: "SUBTITRĂRI",
+  audiodescription: "DESCRIERE AUDIO",
   back: "Înapoi",
 },
 ru: {
@@ -208,6 +262,8 @@ ru: {
   "telecommande-malentendants": "Пульт для людей с нарушением слуха",
   "label-cognitive": "Упрощённый пульт",
   "telecommande-malvoyants": "Пульт для людей с нарушением зрения",
+  sous_titres: "СУБТИТРЫ",
+  audiodescription: "АУДИООПИСАНИЕ",
   back: "Назад",
 },
 sk: {
@@ -216,6 +272,8 @@ sk: {
   "telecommande-malentendants": "Diaľkové ovládanie pre sluchovo postihnutých",
   "label-cognitive": "Zjednodušené diaľkové ovládanie",
   "telecommande-malvoyants": "Diaľkové ovládanie pre zrakovo postihnutých",
+  sous_titres: "TITULKY",
+  audiodescription: "AUDIOPOPIS",
   back: "Späť",
 },
 sl: {
@@ -224,6 +282,8 @@ sl: {
   "telecommande-malentendants": "Daljinski upravljalnik za naglušne osebe",
   "label-cognitive": "Poenostavljen daljinski upravljalnik",
   "telecommande-malvoyants": "Daljinski upravljalnik za slabovidne osebe",
+  sous_titres: "PODNAPISI",
+  audiodescription: "ZVOČNI OPIS",
   back: "Nazaj",
 },
 sr: {
@@ -232,6 +292,8 @@ sr: {
   "telecommande-malentendants": "Даљински за особе са оштећеним слухом",
   "label-cognitive": "Поједностављени даљински управљач",
   "telecommande-malvoyants": "Даљински за особе са оштећеним видом",
+  sous_titres: "ТИТЛОВИ",
+  audiodescription: "АУДИО ОПИС",
   back: "Назад",
 },
 sv: {
@@ -240,6 +302,8 @@ sv: {
   "telecommande-malentendants": "Fjärrkontroll för hörselskadade",
   "label-cognitive": "Förenklad fjärrkontroll",
   "telecommande-malvoyants": "Fjärrkontroll för synskadade",
+  sous_titres: "TEXTNING",
+  audiodescription: "LJUDDESKRIPTION",
   back: "Tillbaka",
 },
 tr: {
@@ -248,6 +312,8 @@ tr: {
   "telecommande-malentendants": "İşitme engelliler için uzaktan kumanda",
   "label-cognitive": "Basitleştirilmiş uzaktan kumanda",
   "telecommande-malvoyants": "Görme engelliler için uzaktan kumanda",
+  sous_titres: "ALT YAZI",
+  audiodescription: "SES AÇIKLAMASI",
   back: "Geri",
 },
 zh: {
@@ -256,6 +322,8 @@ zh: {
   "telecommande-malentendants": "听障人士遥控器",
   "label-cognitive": "简化遥控器",
   "telecommande-malvoyants": "视障人士遥控器",
+  sous_titres: "字幕",
+  audiodescription: "音频描述",
   back: "返回",
 },
 

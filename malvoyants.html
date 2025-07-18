@@ -4,103 +4,84 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Télécommande Responsive</title>
-<link rel="stylesheet" href="telecommandes.css">
+  <link rel="stylesheet" href="telecommandes.css">
 </head>
 <body>
   <div class="remote">
     <img src="assets/images/fond.png" alt="télécommande" class="telecommande-bg">
     
     <div class="btn power-off" onclick="sendCommand('off')">
-    <img src="assets/images/power.png" alt="Power off icon" /></div>
+      <img src="assets/images/power.png" alt="Power off icon" />
+    </div>
 
     <div class="btn power-on" onclick="sendCommand('on')">
-    <img src="assets/images/power.png" alt="Power on icon" /></div>
-
-    
+      <img src="assets/images/power.png" alt="Power on icon" />
+    </div>
 
     <div class="btn home" onclick="sendCommand('home')">
-    <img src="assets/images/home.png" alt="Home icon" /></div>
-     <div class="btn mute" onclick="sendCommand('mute')">
-    <img src="assets/images/mute.png" alt="Mute icon" /></div>
+      <img src="assets/images/home.png" alt="Home icon" />
+    </div>
+
+    <div class="btn mute" onclick="sendCommand('mute')">
+      <img src="assets/images/mute.png" alt="Mute icon" />
+    </div>
     
     <div class="btn chaine"></div>
     <div class="btn chanup" onclick="sendCommand('chanup')">P+</div>
     <div class="btn chandown" onclick="sendCommand('chandown')">P−</div>
 
+    <div class="btn volume"></div>
+    <img src="assets/images/volup.png" class="btn volup" onclick="sendCommand('volup')" alt="volup icon" />
+    <img src="assets/images/voldown.png" class="btn voldown" onclick="sendCommand('voldown')" alt="voldown icon" />
 
+    <div class="btn rond-direction"></div>
 
-  <div class="btn volume"></div>
-  <img src="assets/images/volup.png" class="btn volup" onclick="sendCommand('volup')" alt="volup icon" />
-  <img src="assets/images/voldown.png" class="btn voldown" onclick="sendCommand('voldown')"  alt="voldown icon" />
+    <div class="btn fleche up" onclick="sendCommand('up')"></div>
+    <div class="btn fleche down" onclick="sendCommand('down')"></div>
+    <div class="btn fleche left" onclick="sendCommand('left')"></div>
+    <div class="btn fleche right" onclick="sendCommand('right')"></div>
 
+    <div class="btn bouton-ok" onclick="sendCommand('enter')">OK</div>
 
-  <!-- Cercle central directionnel -->
-  <div class="btn rond-direction"></div>
+    <!-- Bouton texte à traduire dynamiquement -->
+    <div class="btn audiodescription"></div>
 
-  <!-- Flèches autour -->
-  <div class="btn fleche up" onclick="sendCommand('up')"></div>
-  <div class="btn fleche down" onclick="sendCommand('down')"></div>
-  <div class="btn fleche left" onclick="sendCommand('left')"></div>
-  <div class="btn fleche right" onclick="sendCommand('right')"></div>
+    <!-- Pavé numérique -->
+    <div class="btn num num1" onclick="sendCommand('1')">1</div>
+    <div class="btn num num2" onclick="sendCommand('2')">2</div>
+    <div class="btn num num3" onclick="sendCommand('3')">3</div>
 
+    <div class="btn num num4" onclick="sendCommand('4')">4</div>
+    <div class="btn num num5" onclick="sendCommand('5')">5</div>
+    <div class="btn num num6" onclick="sendCommand('6')">6</div>
 
-  <!-- Petit bouton OK au centre -->
-  <div class="btn bouton-ok" onclick="sendCommand('enter')">OK</div>
+    <div class="btn num num7" onclick="sendCommand('7')">7</div>
+    <div class="btn num num8" onclick="sendCommand('8')">8</div>
+    <div class="btn num num9" onclick="sendCommand('9')">9</div>
 
-  <div class="btn audiodescription">AUDIODESCRIPTION</div>
+    <div class="btn num num0" onclick="sendCommand('0')">0</div>
 
+    <!-- RETOUR dynamique -->
+    <div id="back" class="btn retour"><a href="home.html"></a></div>
 
-
-  <!-- Ligne 1 -->
-  <div class="btn num num1" onclick="sendCommand('1')">1</div>
-  <div class="btn num num2" onclick="sendCommand('2')">2</div>
-  <div class="btn num num3" onclick="sendCommand('3')">3</div>
-
-  <!-- Ligne 2 -->
-  <div class="btn num num4" onclick="sendCommand('4')">4</div>
-  <div class="btn num num5" onclick="sendCommand('5')">5</div>
-  <div class="btn num num6" onclick="sendCommand('6')">6</div>
-
-  <!-- Ligne 3 -->
-  <div class="btn num num7" onclick="sendCommand('7')">7</div>
-  <div class="btn num num8" onclick="sendCommand('8')">8</div>
-  <div class="btn num num9" onclick="sendCommand('9')">9</div>
-
-  <!-- Ligne 4 -->
-  <div class="btn num num0" onclick="sendCommand('0')">0</div>
-
-  <div id="back" class="btn retour"><a href="home.html">RETOUR</a></div>
-
-  <img src="assets/images/sabsystem.png" class="btn sabsystem" alt="Logo">
-
+    <img src="assets/images/sabsystem.png" class="btn sabsystem" alt="Logo">
   </div>
 
+  <!-- Scripts -->
+  <script src="lang.js"></script>
+  <script src="script2.js"></script>
+
   <script>
-    function sendCommand(cmd) {
-      console.log("Commande envoyée :", cmd);
-    }
+    document.addEventListener("DOMContentLoaded", () => {
+      const lang = localStorage.getItem("lang") || "fr";
+      const dict = translations[lang] || translations["fr"];
 
-    // Récupérer la langue de l'URL
-    const params = new URLSearchParams(window.location.search);
-    const lang = params.get("lang") || "fr";
+      const elAudioDesc = document.querySelector(".audiodescription");
+      if (elAudioDesc && dict.audiodescription) elAudioDesc.textContent = dict.audiodescription;
 
-    const translatedImages = {
-      shortcut1: "sous-titres",
-      retour: "retour"
-    };
-
-    Object.entries(translatedImages).forEach(([className, baseName]) => {
-      const el = document.querySelector(`.${className}`);
-      if (el) {
-        el.src = `assets/images/${baseName}-${lang}.png`;
-      }
+      const elBack = document.querySelector(".retour a");
+      if (elBack && dict.back) elBack.textContent = dict.back;
     });
   </script>
-  <script>
-    function sendCommand(cmd) {
-      console.log("Commande envoyée :", cmd);
-    }
-  </script>
-    <script src="script2.js"></script>
 </body>
 </html>
