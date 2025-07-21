@@ -335,21 +335,34 @@ function applyTranslations(lang) {
     const el = document.getElementById(key);
     if (el) el.textContent = dict[key];
   }
+
+  // Traduire le bouton RETOUR dynamiquement
+  const elBack = document.querySelector(".retour a");
+  if (elBack && dict.back) elBack.textContent = dict.back;
+
+  // Traduire sous-titres et audiodescription s'ils existent
+  const subtitleEl = document.getElementById("subtitle-btn");
+  if (subtitleEl && dict["subtitle-btn"]) subtitleEl.textContent = dict["subtitle-btn"];
+
+  const adEl = document.getElementById("audio-btn");
+  if (adEl && dict["audio-btn"]) adEl.textContent = dict["audio-btn"];
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   const selector = document.getElementById("language-selector");
 
-  // Si aucune langue enregistrée, on prend celle du navigateur
+  // 1. Si aucune langue n'est stockée, détecter celle du navigateur
   let lang = localStorage.getItem("lang");
   if (!lang) {
-    const browserLang = navigator.language.slice(0, 2);
-    lang = translations[browserLang] ? browserLang : "fr";
+    const browserLang = navigator.language || navigator.userLanguage;
+    lang = browserLang.startsWith("en") ? "en" : "fr"; // tu peux ajouter d'autres langues ici
     localStorage.setItem("lang", lang);
   }
 
+  // 2. Appliquer la langue
   applyTranslations(lang);
 
+  // 3. Si menu déroulant présent, synchroniser sa valeur
   if (selector) {
     selector.value = lang;
     selector.addEventListener("change", () => {
