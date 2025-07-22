@@ -418,3 +418,29 @@ document.addEventListener("DOMContentLoaded", () => {
   applyAccessibilityAttributes(lang);
 });
 
+function applyAccessibilityAttributes(lang) {
+  const dict = translations[lang] || translations["fr"];
+
+  // On applique la langue globale à tout le document
+  document.documentElement.lang = lang;
+
+  // On met à jour les aria-labels ET lang sur les boutons
+  const updateBtn = (id, labelKey) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.setAttribute("aria-label", dict[labelKey]);
+      el.setAttribute("lang", lang); // pour que VoiceOver lise avec le bon accent
+    }
+  };
+
+  updateBtn("telecommande-classique", "telecommande-classique");
+  updateBtn("telecommande-malentendants", "telecommande-malentendants");
+  updateBtn("label-cognitive", "label-cognitive");
+  updateBtn("telecommande-malvoyants", "telecommande-malvoyants");
+
+  // Exemple pour sous-titres / audiodescription si nécessaire
+  updateBtn("subtitle-btn", "sous_titres");
+  updateBtn("audio-btn", "audiodescription");
+}
+
+
