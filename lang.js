@@ -372,3 +372,49 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+function applyAccessibilityAttributes(lang) {
+  const dict = translations[lang] || translations["fr"];
+
+  // Attribut lang sur le body
+  document.documentElement.lang = lang;
+
+  // Pour chaque clé de traduction
+  for (const key in dict) {
+    const el = document.getElementById(key);
+    if (el) {
+      // aria-label
+      el.setAttribute("aria-label", dict[key]);
+
+      // alt si c'est une image
+      if (el.tagName.toLowerCase() === "img") {
+        el.setAttribute("alt", dict[key]);
+      }
+    }
+  }
+
+  // Pour le bouton retour s’il n’a pas d’ID
+  const retourEl = document.querySelector(".retour a");
+  if (retourEl && dict.back) {
+    retourEl.setAttribute("aria-label", dict.back);
+  }
+
+  // Pour les boutons spécifiques si pas déjà traduits
+  const subtitleEl = document.getElementById("subtitle-btn");
+  if (subtitleEl && dict.sous_titres) {
+    subtitleEl.setAttribute("aria-label", dict.sous_titres);
+  }
+
+  const adEl = document.getElementById("audio-btn");
+  if (adEl && dict.audiodescription) {
+    adEl.setAttribute("aria-label", dict.audiodescription);
+  }
+}
+
+// Ajoute à ton DOMContentLoaded existant :
+document.addEventListener("DOMContentLoaded", () => {
+  // ... ton code existant ...
+
+  // Appliquer les attributs d'accessibilité
+  applyAccessibilityAttributes(lang);
+});
+
