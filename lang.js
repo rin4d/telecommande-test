@@ -361,6 +361,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 2. Appliquer la langue
   applyTranslations(lang);
+  applyAccessibilityAttributes(lang);
+
 
   // 3. Si menu déroulant présent, synchroniser sa valeur
   if (selector) {
@@ -443,4 +445,31 @@ function applyAccessibilityAttributes(lang) {
   updateBtn("audio-btn", "audiodescription");
 }
 
+function applyAccessibilityAttributes(lang) {
+  const dict = translations[lang] || translations["fr"];
 
+  // Applique la langue globale à tout le document
+  document.documentElement.lang = lang;
+
+  // Met à jour les aria-labels ET lang pour chaque bouton
+  const updateBtn = (id, labelKey) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.setAttribute("aria-label", dict[labelKey]);
+      el.setAttribute("lang", lang); // Pour forcer la lecture avec le bon accent
+    }
+  };
+
+  updateBtn("telecommande-classique", "telecommande-classique");
+  updateBtn("telecommande-malentendants", "telecommande-malentendants");
+  updateBtn("label-cognitive", "label-cognitive");
+  updateBtn("telecommande-malvoyants", "telecommande-malvoyants");
+  updateBtn("subtitle-btn", "sous_titres");
+  updateBtn("audio-btn", "audiodescription");
+
+  const retourEl = document.querySelector(".retour a");
+  if (retourEl && dict.back) {
+    retourEl.setAttribute("aria-label", dict.back);
+    retourEl.setAttribute("lang", lang);
+  }
+}
