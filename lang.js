@@ -331,40 +331,60 @@ zh: {
 
 function applyTranslations(lang) {
   const dict = translations[lang] || translations["fr"];
+
+  // Appliquer les traductions textuelles et l'accessibilité
   for (const key in dict) {
     const el = document.getElementById(key);
-    if (el) el.textContent = dict[key];
+    if (el) {
+      el.textContent = dict[key]; // Texte visible
+      el.setAttribute("aria-label", dict[key]); // Pour VoiceOver
+      el.setAttribute("lang", lang); // Accent correct
+      if (el.tagName.toLowerCase() === "img") {
+        el.setAttribute("alt", dict[key]); // Pour les images
+      }
+    }
   }
 
-  // Traduire le bouton RETOUR dynamiquement
-  const elBack = document.querySelector(".retour a");
-  if (elBack && dict.back) elBack.textContent = dict.back;
+  // Cas spécifiques si les ID ne correspondent pas
+  const retourEl = document.querySelector(".retour a");
+  if (retourEl && dict.back) {
+    retourEl.textContent = dict.back;
+    retourEl.setAttribute("aria-label", dict.back);
+    retourEl.setAttribute("lang", lang);
+  }
 
-  // Traduire sous-titres et audiodescription s'ils existent
   const subtitleEl = document.getElementById("subtitle-btn");
-  if (subtitleEl && dict["subtitle-btn"]) subtitleEl.textContent = dict["subtitle-btn"];
+  if (subtitleEl && dict.sous_titres) {
+    subtitleEl.textContent = dict.sous_titres;
+    subtitleEl.setAttribute("aria-label", dict.sous_titres);
+    subtitleEl.setAttribute("lang", lang);
+  }
 
   const adEl = document.getElementById("audio-btn");
-  if (adEl && dict["audio-btn"]) adEl.textContent = dict["audio-btn"];
+  if (adEl && dict.audiodescription) {
+    adEl.textContent = dict.audiodescription;
+    adEl.setAttribute("aria-label", dict.audiodescription);
+    adEl.setAttribute("lang", lang);
+  }
+
+  // Met la langue globale pour VoiceOver
+  document.documentElement.lang = lang;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   const selector = document.getElementById("language-selector");
 
-  // 1. Si aucune langue n'est stockée, détecter celle du navigateur
+  // Détection de langue : localeStorage sinon navigateur, sinon fr
   let lang = localStorage.getItem("lang");
   if (!lang) {
-    const browserLang = navigator.language || navigator.userLanguage;
-    lang = browserLang.startsWith("en") ? "en" : "fr"; // tu peux ajouter d'autres langues ici
+    const browserLang = navigator.language?.split("-")[0];
+    lang = translations[browserLang] ? browserLang : "fr";
     localStorage.setItem("lang", lang);
   }
 
-  // 2. Appliquer la langue
   applyTranslations(lang);
-  applyAccessibilityAttributes(lang);
 
-
-  // 3. Si menu déroulant présent, synchroniser sa valeur
+  // Gestion du menu déroulant si présent
   if (selector) {
     selector.value = lang;
     selector.addEventListener("change", () => {
@@ -374,102 +394,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-function applyAccessibilityAttributes(lang) {
-  const dict = translations[lang] || translations["fr"];
-
-  // Attribut lang sur le body
-  document.documentElement.lang = lang;
-
-  // Pour chaque clé de traduction
-  for (const key in dict) {
-    const el = document.getElementById(key);
-    if (el) {
-      // aria-label
-      el.setAttribute("aria-label", dict[key]);
-
-      // alt si c'est une image
-      if (el.tagName.toLowerCase() === "img") {
-        el.setAttribute("alt", dict[key]);
-      }
-    }
-  }
-
-  // Pour le bouton retour s’il n’a pas d’ID
-  const retourEl = document.querySelector(".retour a");
-  if (retourEl && dict.back) {
-    retourEl.setAttribute("aria-label", dict.back);
-  }
-
-  // Pour les boutons spécifiques si pas déjà traduits
-  const subtitleEl = document.getElementById("subtitle-btn");
-  if (subtitleEl && dict.sous_titres) {
-    subtitleEl.setAttribute("aria-label", dict.sous_titres);
-  }
-
-  const adEl = document.getElementById("audio-btn");
-  if (adEl && dict.audiodescription) {
-    adEl.setAttribute("aria-label", dict.audiodescription);
-  }
-}
-
-// Ajoute à ton DOMContentLoaded existant :
-document.addEventListener("DOMContentLoaded", () => {
-  // ... ton code existant ...
-
-  // Appliquer les attributs d'accessibilité
-  applyAccessibilityAttributes(lang);
-});
-
-function applyAccessibilityAttributes(lang) {
-  const dict = translations[lang] || translations["fr"];
-
-  // On applique la langue globale à tout le document
-  document.documentElement.lang = lang;
-
-  // On met à jour les aria-labels ET lang sur les boutons
-  const updateBtn = (id, labelKey) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.setAttribute("aria-label", dict[labelKey]);
-      el.setAttribute("lang", lang); // pour que VoiceOver lise avec le bon accent
-    }
-  };
-
-  updateBtn("telecommande-classique", "telecommande-classique");
-  updateBtn("telecommande-malentendants", "telecommande-malentendants");
-  updateBtn("label-cognitive", "label-cognitive");
-  updateBtn("telecommande-malvoyants", "telecommande-malvoyants");
-
-  // Exemple pour sous-titres / audiodescription si nécessaire
-  updateBtn("subtitle-btn", "sous_titres");
-  updateBtn("audio-btn", "audiodescription");
-}
-
-function applyAccessibilityAttributes(lang) {
-  const dict = translations[lang] || translations["fr"];
-
-  // Applique la langue globale à tout le document
-  document.documentElement.lang = lang;
-
-  // Met à jour les aria-labels ET lang pour chaque bouton
-  const updateBtn = (id, labelKey) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.setAttribute("aria-label", dict[labelKey]);
-      el.setAttribute("lang", lang); // Pour forcer la lecture avec le bon accent
-    }
-  };
-
-  updateBtn("telecommande-classique", "telecommande-classique");
-  updateBtn("telecommande-malentendants", "telecommande-malentendants");
-  updateBtn("label-cognitive", "label-cognitive");
-  updateBtn("telecommande-malvoyants", "telecommande-malvoyants");
-  updateBtn("subtitle-btn", "sous_titres");
-  updateBtn("audio-btn", "audiodescription");
-
-  const retourEl = document.querySelector(".retour a");
-  if (retourEl && dict.back) {
-    retourEl.setAttribute("aria-label", dict.back);
-    retourEl.setAttribute("lang", lang);
-  }
-}
