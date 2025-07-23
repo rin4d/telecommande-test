@@ -332,20 +332,20 @@ zh: {
 function applyTranslations(lang) {
   const dict = translations[lang] || translations["fr"];
 
-  // Appliquer les traductions textuelles et l'accessibilité
+  // Appliquer les traductions et les attributs d’accessibilité
   for (const key in dict) {
     const el = document.getElementById(key);
     if (el) {
-      el.textContent = dict[key]; // Texte visible
-      el.setAttribute("aria-label", dict[key]); // Pour VoiceOver
-      el.setAttribute("lang", lang); // Accent correct
+      el.textContent = dict[key];
+      el.setAttribute("aria-label", dict[key]);
+      el.setAttribute("lang", lang);
       if (el.tagName.toLowerCase() === "img") {
-        el.setAttribute("alt", dict[key]); // Pour les images
+        el.setAttribute("alt", dict[key]);
       }
     }
   }
 
-  // Cas spécifiques si les ID ne correspondent pas
+  // Éléments spécifiques (sans ID dans lang.js)
   const retourEl = document.querySelector(".retour a");
   if (retourEl && dict.back) {
     retourEl.textContent = dict.back;
@@ -367,14 +367,23 @@ function applyTranslations(lang) {
     adEl.setAttribute("lang", lang);
   }
 
-  // Met la langue globale pour VoiceOver
+  // Langue globale du document (utile pour VoiceOver)
   document.documentElement.lang = lang;
+
+  // Direction RTL si langue concernée
+  setDirection(lang);
+}
+
+function setDirection(lang) {
+  const rtlLanguages = ["ar", "he", "fa", "ur"];
+  const isRTL = rtlLanguages.includes(lang);
+  document.body.dir = isRTL ? "rtl" : "ltr";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   const selector = document.getElementById("language-selector");
 
-  // Détection de langue : localeStorage sinon navigateur, sinon fr
+  // Détection initiale
   let lang = localStorage.getItem("lang");
   if (!lang) {
     const browserLang = navigator.language?.split("-")[0];
@@ -384,7 +393,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   applyTranslations(lang);
 
-  // Gestion du menu déroulant si présent
+  // Menu déroulant
   if (selector) {
     selector.value = lang;
     selector.addEventListener("change", () => {
